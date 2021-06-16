@@ -1,0 +1,394 @@
+* {
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  list-style: none;
+  border: 0;
+}
+
+body {
+  font-size: 62.5%;
+  background: #214C5E;
+  color: white;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 5px;
+  overflow: hidden;
+  max-width: 60rem;
+  margin: 0 auto;
+  max-height: 30rem;
+  background: #27657F;
+}
+
+.container #container__left {
+  position: relative;
+  width: 20rem;
+  overflow: hidden;
+  height: 30rem;
+}
+
+.container #container__left #left__img {
+  display: block;
+  max-width: 50rem;
+  width: 300%;
+  height: 30rem;
+  left: -15rem;
+  position: absolute;
+}
+
+.container #container__left #img__gradient-bottom {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(-100%, #D5B5A8), color-stop(50%, transparent));
+  background: linear-gradient(to top, #D5B5A8 -100%, transparent 50%);
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  bottom: 0;
+}
+
+.container #container__left h1, .container #container__left p {
+  position: absolute;
+  color: white;
+  left: 20px;
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: #5c5c5c;
+  text-shadow: -1px 0px 4px gray;
+}
+
+.container #container__left h1 {
+  bottom: 10%;
+  font-size: 2.5rem;
+  text-shadow: gray;
+  font-style: italic;
+}
+
+.container #container__left p {
+  bottom: 5%;
+  font-size: 1rem;
+  font-family: monospace;
+}
+
+.container #container__right {
+  background: #27657F;
+  width: 40rem;
+}
+
+.container #container__right #about {
+  margin-left: 20px;
+}
+
+.container #container__right #about #about__title {
+  margin: 20px 0 20px 0;
+  font-size: 0.8rem;
+  font-family: monospace;
+  letter-spacing: 2.5px;
+  color: rgba(255, 255, 255, 0.651);
+}
+
+.container #container__right #about #about__text {
+  font-size: 1.5rem;
+  letter-spacing: 0px;
+  max-height: 70px;
+  overflow: hidden;
+  width: 85%;
+  margin-bottom: 10px;
+}
+
+.container #container__right #about a {
+  color: #49B7E6;
+  font-size: 1.2rem;
+  letter-spacing: 0px;
+}
+
+.container #container__right #box-list {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.container #container__right #box-list #box-list__title {
+  font-size: 0.8rem;
+  font-family: monospace;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.651);
+  margin-bottom: 5px;
+}
+
+.container #container__right #box-list #box-list__episodes {
+  max-height: 18.5rem;
+  overflow: auto;
+}
+
+.container #container__right #box-list #box-list__episodes::-webkit-scrollbar {
+  width: 0;
+}
+
+.container #container__right #box-list #box-list__episodes .episode__item a {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 300px;
+          flex: 1 1 300px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container #container__right #box-list #box-list__episodes .episode__item a .episode__container-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.container #container__right #box-list #box-list__episodes .episode__item a .episode__container-img .episode__img {
+  width: 10rem;
+  position: absolute;
+}
+
+.container #container__right #box-list #box-list__episodes .episode__item a .episode__about {
+  margin-left: 15px;
+  max-width: 30rem;
+}
+
+.container #container__right #box-list #box-list__episodes .episode__item a .episode__about .episode__duration {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.container__episode {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 5px;
+  overflow: hidden;
+  max-width: 60rem;
+  width: 100%;
+  height: 30rem;
+  margin: 0 auto;
+  max-height: 30rem;
+  background: #27657F;
+  position: relative;
+}
+
+.container__episode .episode__infomartions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container__episode .episode__infomartions .episode__container-img {
+  position: relative;
+  margin: 30px 0 0 40px;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 50rem;
+  height: 18rem;
+}
+
+.container__episode .episode__infomartions .episode__container-img img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.container__episode .episode__infomartions .episode__container-text {
+  margin: 30px 20px 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 60%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 18rem;
+}
+
+.container__episode .episode__infomartions .episode__container-text h1 {
+  font-size: 2rem;
+  width: 80%;
+}
+
+.container__episode .episode__infomartions .episode__container-text p {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  letter-spacing: 0px;
+  max-height: 70px;
+  overflow: hidden;
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+.container__episode .episode__infomartions .episode__container-text a {
+  color: #49B7E6;
+  font-size: 1.2rem;
+  letter-spacing: 0px;
+}
+
+.container__episode .episode__infomartions .episode__container-text span {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.651);
+}
+
+.container__episode .player {
+  margin-top: 2rem;
+  background: #15475B;
+  max-width: 60rem;
+  width: 100%;
+  height: 8rem;
+}
+
+.container__episode .player .player__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 13rem;
+}
+
+.container__episode .player .player__controls #btnPrevious {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 1rem;
+  background: white;
+  border-radius: 50%;
+  padding: 15px 25px 15px 25px;
+  width: 1rem;
+  cursor: pointer;
+}
+
+.container__episode .player .player__controls #btnPrevious img {
+  width: 1rem;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.container__episode .player .player__controls #btnPlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #329ECB;
+  border-radius: 50%;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.container__episode .player .player__controls #btnPlay img {
+  width: 2rem;
+}
+
+.container__episode .player .player__controls #btnNext {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  background: white;
+  border-radius: 50%;
+  padding: 15px 25px 15px 25px;
+  width: 1rem;
+}
+
+.container__episode .player .player__controls #btnNext img {
+  width: 1rem;
+}
+
+.container__episode #btnClose {
+  position: absolute;
+  border-radius: 50%;
+  width: 1rem;
+  right: 20px;
+  top: 20px;
+}
+
+@media (max-width: 575.98px) {
+  body .container {
+    overflow: initial;
+  }
+  body .container #container__left {
+    max-width: initial;
+    left: initial;
+    width: 100%;
+  }
+  body .container #container__right {
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  body .container {
+    overflow: initial;
+  }
+  body .container #container__left {
+    max-width: initial;
+    left: initial;
+    width: 100%;
+  }
+  body .container #container__left #left__img {
+    width: 100%;
+    max-width: initial;
+    left: initial;
+  }
+  body .container #container__right {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

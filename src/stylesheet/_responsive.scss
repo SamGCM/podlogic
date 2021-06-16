@@ -1,0 +1,54 @@
+// Dispositivos extra small (telefones em modo retrato, com menos de 576px)
+@media (max-width: 575.98px) {
+    body{
+        .container{
+            overflow: initial;
+    
+            #container__left{
+                max-width: initial;
+                left: initial;
+                width: 100%;
+    
+                #left__img{
+
+                }
+            }
+            #container__right{
+                width: 100%;
+            }
+        }
+    }
+}
+
+// Dispositivos small (telefones em modo paisagem, com 576px ou mais)
+@media (min-width: 576px) and (max-width: 767.98px) {
+    body{
+        .container{
+            overflow: initial;
+    
+            #container__left{
+                max-width: initial;
+                left: initial;
+                width: 100%;
+    
+                #left__img{
+                    width: 100%;
+                    max-width: initial;
+                    left: initial;
+                }
+            }
+            #container__right{
+                width: 100%;
+            }
+        }
+    }
+}
+
+// Dispositivos médios (tablets com 768px ou mais)
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+// Dispositivos large (desktops com 992px ou mais)
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+// Dispositivos extra large (desktops grandes com 1200px ou mais)
+@media (min-width: 1200px) {}
