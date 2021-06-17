@@ -10,11 +10,70 @@
                 width: 100%;
     
                 #left__img{
-
+                    width: 100%;
+                    max-width: initial;
+                    left: initial;
                 }
             }
             #container__right{
                 width: 100%;
+            }
+        }
+        .container__episode{
+            overflow: initial;
+            max-height: initial;
+            height: 100%;
+            .episode__infomartions{
+                flex-wrap: wrap;
+                .episode__container-img{
+                    position: relative;
+                    margin: 0;
+                    border-radius: 0;
+                    overflow: hidden;
+                    width: 100%;
+                    height: 45vh;
+                    
+                    
+                    img{
+                        width: 100%;
+                        height: 45vh;
+                        position: absolute;
+                    }
+                }
+                .episode__container-text{
+                    max-width: 100%;
+
+                    h1{
+                        width: 100%;
+                        font-size: 1.5rem;
+                    }
+
+                    p{
+                        width: 100%;
+                    }
+                }
+            }
+
+            
+
+            .container__player{
+                .player{
+                    flex-direction: column;
+                    width: 100%;
+                }
+                .container__progress-audio{
+                    width: 100%;
+                    justify-content: space-between;
+
+                    .container__progressBar{
+                        width: 70%;
+
+                        .progressBar{
+                            width: 100%;
+                        }
+                    }
+                }
+                
             }
         }
     }
@@ -39,6 +98,63 @@
             }
             #container__right{
                 width: 100%;
+            }
+        }
+        .container__episode{
+            overflow: initial;
+            max-height: initial;
+            height: 100%;
+            .episode__infomartions{
+                flex-wrap: wrap;
+                .episode__container-img{
+                    position: relative;
+                    margin: 0;
+                    border-radius: 0;
+                    overflow: hidden;
+                    width: 100%;
+                    height: 45vh;
+                    
+                    
+                    img{
+                        width: 100%;
+                        height: 45vh;
+                        position: absolute;
+                    }
+                }
+                .episode__container-text{
+                    max-width: 100%;
+
+                    h1{
+                        width: 100%;
+                        font-size: 1.5rem;
+                    }
+
+                    p{
+                        width: 100%;
+                    }
+                }
+            }
+
+            
+
+            .container__player{
+                .player{
+                    flex-direction: column;
+                    width: 100%;
+                }
+                .container__progress-audio{
+                    width: 100%;
+                    justify-content: space-between;
+
+                    .container__progressBar{
+                        width: 70%;
+
+                        .progressBar{
+                            width: 100%;
+                        }
+                    }
+                }
+                
             }
         }
     }

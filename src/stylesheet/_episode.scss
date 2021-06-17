@@ -17,7 +17,7 @@
     position: relative;
     .episode__infomartions{
         display: flex;
-
+        flex-wrap: initial;
         .episode__container-img{
             position: relative;
             margin: 30px 0 0 40px;
@@ -51,7 +51,7 @@
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 font-size: 1rem;
                 letter-spacing: 0px;
-                max-height: 70px;
+                max-height: 76px;
                 overflow: hidden;
                 width: 80%; // MUDAR PARA 95%
             }
@@ -220,6 +220,7 @@
         right: 20px;
         top: 10px;
         cursor: pointer;
+        z-index: 2;
     }
     
 }

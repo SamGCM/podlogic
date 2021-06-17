@@ -78,7 +78,7 @@ const AudioPlayer = () => {
         </div>
 
         {/* Progress bar */}
-        <div>
+        <div className='container__progressBar'>
             <input type='range' className='progressBar' defaultValue='0' ref={progressBar} onChange={changeRange}/>
         </div>
 

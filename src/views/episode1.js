@@ -1,14 +1,6 @@
 import React from 'react'
 import { Episode1Info } from '../hooks/geralInfo.js'
-
-
-
-
-
 import AudioPlayer from '../hooks/audio.js'
-
-
-
 
 
 function Episode1(){

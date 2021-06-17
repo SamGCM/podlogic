@@ -209,6 +209,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: initial;
+      flex-wrap: initial;
 }
 
 .container__episode .episode__infomartions .episode__container-img {
@@ -252,7 +254,7 @@ a {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1rem;
   letter-spacing: 0px;
-  max-height: 70px;
+  max-height: 76px;
   overflow: hidden;
   width: 80%;
 }
@@ -460,6 +462,7 @@ a {
   right: 20px;
   top: 10px;
   cursor: pointer;
+  z-index: 2;
 }
 
 @media (max-width: 575.98px) {
@@ -471,7 +474,63 @@ a {
     left: initial;
     width: 100%;
   }
+  body .container #container__left #left__img {
+    width: 100%;
+    max-width: initial;
+    left: initial;
+  }
   body .container #container__right {
+    width: 100%;
+  }
+  body .container__episode {
+    overflow: initial;
+    max-height: initial;
+    height: 100%;
+  }
+  body .container__episode .episode__infomartions {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body .container__episode .episode__infomartions .episode__container-img {
+    position: relative;
+    margin: 0;
+    border-radius: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 45vh;
+  }
+  body .container__episode .episode__infomartions .episode__container-img img {
+    width: 100%;
+    height: 45vh;
+    position: absolute;
+  }
+  body .container__episode .episode__infomartions .episode__container-text {
+    max-width: 100%;
+  }
+  body .container__episode .episode__infomartions .episode__container-text h1 {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  body .container__episode .episode__infomartions .episode__container-text p {
+    width: 100%;
+  }
+  body .container__episode .container__player .player {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  body .container__episode .container__player .container__progress-audio {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body .container__episode .container__player .container__progress-audio .container__progressBar {
+    width: 70%;
+  }
+  body .container__episode .container__player .container__progress-audio .container__progressBar .progressBar {
     width: 100%;
   }
 }
@@ -491,6 +550,57 @@ a {
     left: initial;
   }
   body .container #container__right {
+    width: 100%;
+  }
+  body .container__episode {
+    overflow: initial;
+    max-height: initial;
+    height: 100%;
+  }
+  body .container__episode .episode__infomartions {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body .container__episode .episode__infomartions .episode__container-img {
+    position: relative;
+    margin: 0;
+    border-radius: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 45vh;
+  }
+  body .container__episode .episode__infomartions .episode__container-img img {
+    width: 100%;
+    height: 45vh;
+    position: absolute;
+  }
+  body .container__episode .episode__infomartions .episode__container-text {
+    max-width: 100%;
+  }
+  body .container__episode .episode__infomartions .episode__container-text h1 {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  body .container__episode .episode__infomartions .episode__container-text p {
+    width: 100%;
+  }
+  body .container__episode .container__player .player {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  body .container__episode .container__player .container__progress-audio {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body .container__episode .container__player .container__progress-audio .container__progressBar {
+    width: 70%;
+  }
+  body .container__episode .container__player .container__progress-audio .container__progressBar .progressBar {
     width: 100%;
   }
 }
