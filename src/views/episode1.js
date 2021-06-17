@@ -19,6 +19,7 @@ function Episode1(){
         return(
             <div>
                 <div className='container__episode'>
+                <button id='btnClose'>x</button>
                     <div className='episode__infomartions'>
                         <div className='episode__container-img'>
                             <img src={episode1['cover']} alt='' />
@@ -35,12 +36,8 @@ function Episode1(){
                     </div>
                     <div className='container__player'>
                         <AudioPlayer/>
-                        
-
-
-                        
                     </div>
-                    <button id='btnClose'>x</button>
+                    
                 </div>
             </div>
         )

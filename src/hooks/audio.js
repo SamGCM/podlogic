@@ -17,7 +17,7 @@ const AudioPlayer = () => {
   const progressBar = useRef()
   const animationRef = useRef()
 
-
+  // effect
 
   useEffect(() => {
     const seconds = Math.floor(audioPlayer.current.duration)
@@ -25,6 +25,9 @@ const AudioPlayer = () => {
     progressBar.current.max = seconds
   },[audioPlayer?.current?.loadedmetadata, audioPlayer?.current?.readyState])
 
+
+
+  // função que muda o icone do botão de play para pause
   const togglePlayPause = () => {
     const prevValue = isPlaying
 
@@ -38,6 +41,8 @@ const AudioPlayer = () => {
     }
   }
 
+
+  // Faz o progress bar seguir junto com o tempo da música
   const whilePlaying = () => {
     progressBar.current.value = audioPlayer.current.currentTime
     changePlayerCurrentTime()
@@ -56,6 +61,7 @@ const AudioPlayer = () => {
   }
 
 
+  //Icones de play e pause
   const iconPlay = imgPlay
   const iconPause = imgPause
 
@@ -63,6 +69,26 @@ const AudioPlayer = () => {
   return (
     <div className='player'>
       <audio ref={audioPlayer} src='https://tutorialehtml.com/assets_tutorials/media/Loreena_Mckennitt_Snow_56bit.mp3'/>
+      
+      <div className='container__progress-audio'>
+        {/* Current time */}
+
+        <div className='currentTime'>
+          {convertTime(currentTime)}
+        </div>
+
+        {/* Progress bar */}
+        <div>
+            <input type='range' className='progressBar' defaultValue='0' ref={progressBar} onChange={changeRange}/>
+        </div>
+
+
+        {/* duration*/}
+        <div className='duration'>
+            {(duration && !isNaN(duration)) && convertTime(duration)}
+        </div>
+      </div>
+      
       <div className='player__controls'>
           <button id='btnPrevious'>
               <img src={iconNext} alt='' />
@@ -76,22 +102,7 @@ const AudioPlayer = () => {
           
       </div>
 
-      {/* Current time */}
-
-      <div className='currentTime'>
-        {convertTime(currentTime)}
-      </div>
-
-      {/* Progress bar */}
-      <div>
-          <input type='range' className='progressBar' defaultValue='0' ref={progressBar} onChange={changeRange}/>
-      </div>
-
-
-      {/* duration*/}
-      <div className='duration'>
-          {(duration && !isNaN(duration)) && convertTime(duration)}
-      </div>
+      
     </div>
   );
 };
