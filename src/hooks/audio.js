@@ -1,42 +1,99 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import imgPlay from '../images/play.png'
 import imgPause from '../images/pause.png'
+import iconNext from '../images/next.png'
+import { convertTime } from '../functions/converTime.js';
 
-const useAudio = url => {
-  const [audio] = useState(new Audio(url));
-  const [playing, setPlaying] = useState(false);
+const AudioPlayer = () => {
 
-  const toggle = () => setPlaying(!playing);
+  //state
+
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [duration, setDuration] = useState(0)
+  const [currentTime, setCurrentTime] = useState(0)
+
+  // references
+  const audioPlayer = useRef()
+  const progressBar = useRef()
+  const animationRef = useRef()
+
+
 
   useEffect(() => {
-      playing ? audio.play() : audio.pause();
-    },
-    [playing]
-  );
+    const seconds = Math.floor(audioPlayer.current.duration)
+    setDuration(seconds)
+    progressBar.current.max = seconds
+  },[audioPlayer?.current?.loadedmetadata, audioPlayer?.current?.readyState])
 
-  useEffect(() => {
-    audio.addEventListener('ended', () => setPlaying(false));
-    return () => {
-      audio.removeEventListener('ended', () => setPlaying(false));
-    };
-  }, []);
+  const togglePlayPause = () => {
+    const prevValue = isPlaying
 
-  return [playing, toggle];
-};
+    setIsPlaying(!prevValue);
+    if(!prevValue){
+      audioPlayer.current.play()
+      animationRef.current = requestAnimationFrame(whilePlaying)
+    }else{
+      audioPlayer.current.pause()
+      cancelAnimationFrame(animationRef.current)
+    }
+  }
 
-const iconPlay = imgPlay
-const iconPause = imgPause
+  const whilePlaying = () => {
+    progressBar.current.value = audioPlayer.current.currentTime
+    changePlayerCurrentTime()
+    animationRef.current = requestAnimationFrame(whilePlaying)
+  }
 
-const Player = ({ url }) => {
-  const [playing, toggle] = useAudio(url);
+
+  const changeRange = () => {
+    audioPlayer.current.currentTime = progressBar.current.value
+    changePlayerCurrentTime()
+  }
+
+  const changePlayerCurrentTime = () => {
+    progressBar.current.style.setProperty('--seek-before-width', `${progressBar.current.value / duration * 100}%`)
+    setCurrentTime(progressBar.current.value)
+  }
+
+
+  const iconPlay = imgPlay
+  const iconPause = imgPause
+
 
   return (
-    <div>
-      <button id='btnPlay' onClick={toggle}>
-        <img  src={playing ? iconPause : iconPlay}/>
-      </button>
+    <div className='player'>
+      <audio ref={audioPlayer} src='https://tutorialehtml.com/assets_tutorials/media/Loreena_Mckennitt_Snow_56bit.mp3'/>
+      <div className='player__controls'>
+          <button id='btnPrevious'>
+              <img src={iconNext} alt='' />
+          </button>
+          <button id='btnPlay' onClick={togglePlayPause}>
+            <img  src={isPlaying ? iconPause : iconPlay}/>
+          </button>
+          <button id='btnNext'>
+              <img src={iconNext} alt='' />
+          </button>
+          
+      </div>
+
+      {/* Current time */}
+
+      <div className='currentTime'>
+        {convertTime(currentTime)}
+      </div>
+
+      {/* Progress bar */}
+      <div>
+          <input type='range' className='progressBar' defaultValue='0' ref={progressBar} onChange={changeRange}/>
+      </div>
+
+
+      {/* duration*/}
+      <div className='duration'>
+          {(duration && !isNaN(duration)) && convertTime(duration)}
+      </div>
     </div>
   );
 };
 
-export default Player;
+export default AudioPlayer;

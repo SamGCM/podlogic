@@ -184,6 +184,10 @@ a {
   font-weight: bold;
 }
 
+:root {
+  --seek-before-width: 0;
+}
+
 .container__episode {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -265,7 +269,7 @@ a {
   color: rgba(255, 255, 255, 0.651);
 }
 
-.container__episode .player {
+.container__episode .container__player {
   margin-top: 2rem;
   background: #15475B;
   max-width: 60rem;
@@ -273,7 +277,7 @@ a {
   height: 8rem;
 }
 
-.container__episode .player .player__controls {
+.container__episode .container__player .player .player__controls {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -286,7 +290,7 @@ a {
   width: 13rem;
 }
 
-.container__episode .player .player__controls #btnPrevious {
+.container__episode .container__player .player .player__controls #btnPrevious {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -304,13 +308,13 @@ a {
   cursor: pointer;
 }
 
-.container__episode .player .player__controls #btnPrevious img {
+.container__episode .container__player .player .player__controls #btnPrevious img {
   width: 1rem;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-.container__episode .player .player__controls #btnPlay {
+.container__episode .container__player .player .player__controls #btnPlay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -326,11 +330,11 @@ a {
   cursor: pointer;
 }
 
-.container__episode .player .player__controls #btnPlay img {
+.container__episode .container__player .player .player__controls #btnPlay img {
   width: 2rem;
 }
 
-.container__episode .player .player__controls #btnNext {
+.container__episode .container__player .player .player__controls #btnNext {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -347,8 +351,56 @@ a {
   width: 1rem;
 }
 
-.container__episode .player .player__controls #btnNext img {
+.container__episode .container__player .player .player__controls #btnNext img {
   width: 1rem;
+}
+
+.container__episode .progressBar {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: #446C7C;
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+  height: 11px;
+  outline: none;
+}
+
+.container__episode .progressBar::before {
+  content: '';
+  height: 11px;
+  width: var(--seek-before-width);
+  background-color: #319BC8;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.container__episode .progressBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: none;
+  background-color: #329ECB;
+  cursor: pointer;
+  position: relative;
+  margin: -2px 0 0 0;
+  z-index: 3;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container__episode .progressBar:active::-webkit-slider-thumb {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background: white;
 }
 
 .container__episode #btnClose {

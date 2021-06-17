@@ -1,10 +1,11 @@
 import React from 'react'
 import { Episode1Info } from '../hooks/geralInfo.js'
 
-import iconPlay from '../images/play.png'
-import iconNext from '../images/next.png'
 
-import Player from '../hooks/audio.js'
+
+
+
+import AudioPlayer from '../hooks/audio.js'
 
 
 
@@ -32,19 +33,12 @@ function Episode1(){
                         </div>
                         
                     </div>
-                    <div className='player'>
-                        <div>
-                            
-                        </div>
-                        <div className='player__controls'>
-                            <button id='btnPrevious'>
-                                <img src={iconNext} alt='' />
-                            </button>
-                            <Player url={'https://api-frontend-test.brlogic.com/podcast/episodes/365/audio.mp3'}/>
-                            <button id='btnNext'>
-                                <img src={iconNext} alt='' />
-                            </button>
-                        </div>
+                    <div className='container__player'>
+                        <AudioPlayer/>
+                        
+
+
+                        
                     </div>
                     <button id='btnClose'>x</button>
                 </div>
