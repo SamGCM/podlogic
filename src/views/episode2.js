@@ -47,7 +47,7 @@ function Episode2(){
                                 setHeight(height === '70px' ? 'fit-content' :'70px')
                                 setRotation(rotation === 'rotate(0deg)' ? 'rotate(180deg)' : 'rotate(0deg)')
                                 readLess(btnMoreText === 'Ler mais' ? 'Ler menos' : 'Ler mais')
-                                setContainerHeight(containerHeight == '18rem' ? '45vh' : '18rem')
+                                setContainerHeight(containerHeight === '18rem' ? '45vh' : '18rem')
                             }}>
                                 <span ref={readMore} >Ler mais</span>
                                 <img ref={downArrow} src={iconDownArrow} alt=''/>
