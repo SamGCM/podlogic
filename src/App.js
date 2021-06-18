@@ -1,7 +1,9 @@
 import axios from 'axios';
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect, useRef} from 'react';
 import { convertTime } from './functions/converTime.js';
 import {Link} from 'react-router-dom'
+import iconDownArrow from './images/down-arrow.png'
+
 
 
 // HOOKS RESPONSAVEIS PELOS DADOS DOS EPISODIOS
@@ -37,10 +39,27 @@ function App() {
   const episode5 = Episode5Info()
   const episode6 = Episode6Info()
 
+  
+  
+  // Effect para ler mais do texto e esconder
 
+  const text = useRef()
+  const downArrow = useRef()
+  const readMore = useRef()
+
+
+  const [height, setHeight] = useState('70px')
+  const [rotation, setRotation] = useState('rotate(0deg)')
+  const [btnMoreText, readLess] = useState('Ler mais')
+
+    useEffect(( ) => {
+      text.current.style.maxHeight = height;
+      downArrow.current.style.transform = rotation
+      readMore.current.innerHTML = btnMoreText
+    },[height, rotation, btnMoreText])
   
 
-  
+    
 
   return (
     <div>
@@ -48,14 +67,21 @@ function App() {
                 <div id='container__left'>
                     <img id='left__img' src={infoHome.cover} alt=''/>
                     <div id='img__gradient-bottom'></div>
-                    <h1>{infoHome.name}</h1>
+                    <h1> {infoHome.name}</h1>
                     <p>6 episódios</p>
                 </div>
                 <div id='container__right'>
                     <div id='about' > 
                     <h5 id='about__title' >SOBRE O PODCAST</h5>
-                    <p id='about__text'>{infoHome['description']}</p>
-                    <Link>Ler mais</Link>
+                    <p ref={text}   id='about__text'>{infoHome['description']}</p>
+                    <div className='container__read-more' onClick={() => {
+                        setHeight(height === '70px' ? 'fit-content' :'70px')
+                        setRotation(rotation === 'rotate(0deg)' ? 'rotate(180deg)' : 'rotate(0deg)')
+                        readLess(btnMoreText === 'Ler mais' ? 'Ler menos' : 'Ler mais')
+                      }}>
+                      <span ref={readMore} >Ler mais</span>
+                      <img ref={downArrow} src={iconDownArrow} alt=''/>
+                    </div>
                     </div>
                     <div id='box-list'>
                     <h5 id='box-list__title' >LISTA DE EPISÓDIOS</h5>
