@@ -6,7 +6,7 @@ $height-container: 30rem;
     border-radius: 5px;
     overflow: hidden; // Tirar no modo mobile
     max-width: 60rem;
-    margin: 0 auto;
+    margin: 18vh auto;
     max-height: $height-container;
     background: #27657F;
     #container__left{
@@ -100,9 +100,23 @@ $height-container: 30rem;
             #box-list__episodes{
                 max-height: 18.5rem;
                 overflow: auto;
+
                 &::-webkit-scrollbar{
-                    width: 0;
+                    width: 10px;
+                    overflow: hidden;
                 }
+        
+                &::-webkit-scrollbar-track{
+                    background: transparent;
+                }
+        
+                &::-webkit-scrollbar-thumb {
+                    background: #E5DCD7;   
+                    border-radius: 20px;
+                    border: 1px solid #e0e0e0;
+                }
+
+
 
                 .episode__item{
                     a{
@@ -134,7 +148,7 @@ $height-container: 30rem;
                             margin-left: 15px;
                             max-width: 30rem; // MUDAR PARA 60% NO MOBILE
                             .episode__title{
-                                
+                                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                             }
                             
                             .episode__duration{

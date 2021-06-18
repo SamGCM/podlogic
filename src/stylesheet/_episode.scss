@@ -3,18 +3,23 @@
 }
 
 
+
+
 .container__episode{
+    overflow: hidden;
     display: flex;
     flex-wrap: wrap;
     border-radius: 5px;
-    overflow: hidden; // Tirar no modo mobile
     max-width: 60rem;
     width: 100%;
-    height: 30rem;
-    margin: 0 auto;
+    height: 35rem;
+    margin: 18vh auto;
     max-height: $height-container;
     background: #27657F;
     position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    
     .episode__infomartions{
         display: flex;
         flex-wrap: initial;
@@ -72,7 +77,6 @@
         }
     }
     .container__player{
-        margin-top: 2rem;
         background: #15475B;
         max-width: 60rem;
         width: 100%;
@@ -98,7 +102,7 @@
                     width: 1rem;
                     background: white;
                     border-radius: 50%;
-                    padding: 15px 25px 15px 25px;
+                    padding: 15px 20px 15px 20px;
                     width: 1rem;
                     cursor: pointer;
                     img{
@@ -128,7 +132,7 @@
                     cursor: pointer;
                     background: white;
                     border-radius: 50%;
-                    padding: 15px 25px 15px 25px;
+                    padding: 15px 20px 15px 20px;
                     width: 1rem;
                     img{
                         width: 1rem;
@@ -213,14 +217,18 @@
         
     }
     #btnClose{
-        background: transparent;
-        color: white;
-        font-size:2.5rem;
+        padding: 10px;
+        background: $bg-iconX-desktop;
+        border-radius: 50%;
         position: absolute;
         right: 20px;
-        top: 10px;
+        top: 20px;
         cursor: pointer;
         z-index: 2;
+        img{
+            width: 1.3rem;
+            vertical-align: middle;
+        }
     }
     
 }
