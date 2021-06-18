@@ -1,6 +1,7 @@
 import React from 'react'
 import { Episode2Info } from '../hooks/geralInfo.js'
 import AudioPlayer from '../hooks/audio.js'
+import iconX from '../images/letra-x.png'
 
 
 function Episode2(){
@@ -11,7 +12,9 @@ function Episode2(){
         return(
             <div>
                 <div className='container__episode'>
-                <button id='btnClose'>x</button>
+                <a href='/' id='btnClose'>
+                    <img src={iconX} alt='' />
+                </a>
                     <div className='episode__infomartions'>
                         <div className='episode__container-img'>
                             <img src={episode2['cover']} alt='' />
@@ -21,7 +24,7 @@ function Episode2(){
                             <p>{episode2['description']}</p>
                             <a>Ler mais v</a>
                             <span id='participants'>
-                                Participantes: {episode2['participants'][0]}, {episode2['participants'][1]}, {episode2['participants'][2]}
+                                Participantes: {episode2['participants'].toString()}
                             </span>
                         </div>
                         

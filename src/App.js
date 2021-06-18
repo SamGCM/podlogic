@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState, useEffect} from 'react';
 import { convertTime } from './functions/converTime.js';
+import {Link} from 'react-router-dom'
 
 
 // HOOKS RESPONSAVEIS PELOS DADOS DOS EPISODIOS
@@ -54,13 +55,13 @@ function App() {
                     <div id='about' > 
                     <h5 id='about__title' >SOBRE O PODCAST</h5>
                     <p id='about__text'>{infoHome['description']}</p>
-                    <a>Ler mais</a>
+                    <Link>Ler mais</Link>
                     </div>
                     <div id='box-list'>
                     <h5 id='box-list__title' >LISTA DE EPISÓDIOS</h5>
                     <ul id='box-list__episodes'>
                         <li className='episode__item'>
-                        <a href='/episode-1'>
+                        <Link to='/episode-1'>
                             <div class='episode__container-img'>
                             <img className='episode__img' src={episode1['cover']} alt=''/>
                             </div>
@@ -68,10 +69,10 @@ function App() {
                             <h1 className='episode__title' >Episódio {episode1['episodeNumber']} - {episode1['name']}</h1>
                             <p className='episode__duration'>{convertTime(episode1['duration'])}</p>
                             </div>
-                        </a>
+                        </Link>
                         </li>
                         <li className='episode__item'>
-                        <a>
+                        <Link to='/episode-2' >
                             <div class='episode__container-img'>
                             <img className='episode__img' src={episode2['cover']} alt=''/>
                             </div>
@@ -79,10 +80,10 @@ function App() {
                             <h1 className='episode__title' >Episódio {episode2['episodeNumber']} - {episode2['name']}</h1>
                             <p className='episode__duration'>{convertTime(episode2['duration'])}</p>
                             </div>
-                        </a>
+                        </Link>
                         </li>
                         <li className='episode__item'>
-                        <a>
+                        <Link to='/episode-3'>
                             <div class='episode__container-img'>
                             <img className='episode__img' src={episode3['cover']} alt=''/>
                             </div>
@@ -90,10 +91,10 @@ function App() {
                             <h1 className='episode__title' >Episódio {episode3['episodeNumber']} - {episode3['name']}</h1>
                             <p className='episode__duration'>{convertTime(episode3['duration'])}</p>
                             </div>
-                        </a>
+                        </Link>
                         </li>
                         <li className='episode__item'>
-                        <a>
+                        <Link to='/episode-4'>
                             <div class='episode__container-img'>
                             <img className='episode__img' src={episode4['cover']} alt=''/>
                             </div>
@@ -101,10 +102,10 @@ function App() {
                             <h1 className='episode__title' >Episódio {episode4['episodeNumber']} - {episode4['name']}</h1>
                             <p className='episode__duration'>{convertTime(episode4['duration'])}</p>
                             </div>
-                        </a>
+                        </Link>
                         </li>
                         <li className='episode__item'>
-                        <a>
+                        <Link to='/episode-5'>
                             <div class='episode__container-img'>
                             <img className='episode__img' src={episode5['cover']} alt=''/>
                             </div>
@@ -112,10 +113,10 @@ function App() {
                             <h1 className='episode__title' >Episódio {episode5['episodeNumber']} - {episode5['name']}</h1>
                             <p className='episode__duration'>{convertTime(episode5['duration'])}</p>
                             </div>
-                        </a>
+                        </Link>
                         </li>
                         <li className='episode__item'>
-                        <a>
+                        <Link to='/episode-6'>
                             <div class='episode__container-img'>
                             <img className='episode__img' src={episode6['cover']} alt=''/>
                             </div>
@@ -123,7 +124,7 @@ function App() {
                             <h1 className='episode__title' >Episódio {episode6['episodeNumber']} - {episode6['name']}</h1>
                             <p className='episode__duration'>{convertTime(episode6['duration'])}</p>
                             </div>
-                        </a>
+                        </Link>
                         </li>
                     </ul>
                     </div>

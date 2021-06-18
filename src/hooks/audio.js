@@ -1,8 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
+import {Link} from 'react-router-dom'
+
+
 import imgPlay from '../images/play.png'
 import imgPause from '../images/pause.png'
 import iconNext from '../images/next.png'
+
+
 import { convertTime } from '../functions/converTime.js';
+
+
 
 const AudioPlayer = () => {
 
@@ -65,6 +72,38 @@ const AudioPlayer = () => {
   const iconPlay = imgPlay
   const iconPause = imgPause
 
+  // Pega a url atual para navegar para os próximos episódios
+
+  const nextEpisode = () => {
+    const actualUrl = window.location.href
+    
+
+    const regex = parseInt(actualUrl.substr(-1))+1
+
+    if(regex == 7){
+      return actualUrl.replace(actualUrl, 'episode-'+ 1)
+    }{
+      return actualUrl.replace(actualUrl, 'episode-'+ regex)
+    }
+  }
+
+  const previousEpisode = () => {
+    const actualUrl = window.location.href
+    
+
+    const regex = parseInt(actualUrl.substr(-1))-1
+    
+    
+    if(regex == 0){
+      return actualUrl.replace(actualUrl, 'episode-'+ 6)
+    }{
+      return actualUrl.replace(actualUrl, 'episode-'+ regex)
+    }
+  }
+
+  const next = nextEpisode()
+  const previous = previousEpisode()
+
 
   return (
     <div className='player'>
@@ -90,15 +129,15 @@ const AudioPlayer = () => {
       </div>
       
       <div className='player__controls'>
-          <button id='btnPrevious'>
+          <Link to={previous} id='btnPrevious'>
               <img src={iconNext} alt='' />
-          </button>
+          </Link>
           <button id='btnPlay' onClick={togglePlayPause}>
-            <img  src={isPlaying ? iconPause : iconPlay}/>
+            <img  src={isPlaying ? iconPause : iconPlay} alt='' />
           </button>
-          <button id='btnNext'>
+          <Link to={next} id='btnNext'>
               <img src={iconNext} alt='' />
-          </button>
+          </Link>
           
       </div>
 
