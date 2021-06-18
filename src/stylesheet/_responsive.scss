@@ -76,6 +76,15 @@
             height: 100%;
             margin: 0;
 
+            #btnClose{
+                right: 10px;
+                top: 10px;
+                padding: 8px;
+                img{
+                    width: 1rem;
+                }
+            }
+
             .episode__infomartions{
                 flex-wrap: wrap;
 
@@ -88,7 +97,7 @@
                     height: 35vh;
                     
                     img{
-                        width: 100%;
+                        width: 110%;
                         height: 35vh;
                         position: absolute;
                     }
@@ -96,6 +105,8 @@
 
                 .episode__container-text{
                     max-width: 100%;
+                    overflow: hidden;
+                    margin: 30px 20px 0 20px;
 
                     h1{
                         width: 100%;
@@ -111,7 +122,7 @@
             
 
             .container__player{
-
+                height: 7.5rem;
                 .player{
                     flex-direction: column;
                     width: 100%;
@@ -194,8 +205,19 @@
             height: 100%;
             margin: 0;
 
+            #btnClose{
+                right: 12px;
+                top: 12px;
+                padding: 9px;
+                img{
+                    width: 1rem;
+                }
+            }
+
             .episode__infomartions{
                 flex-wrap: wrap;
+                overflow: hidden;
+                max-height: 90vh;
 
                 .episode__container-img{
                     position: relative;
@@ -203,17 +225,19 @@
                     border-radius: 0;
                     overflow: hidden;
                     width: 100%;
-                    height: 45vh;
+                    height: 37vh;
                     
                     img{
-                        width: 100%;
-                        height: 45vh;
+                        width: 110%;
+                        height: 37vh;
                         position: absolute;
                     }
                 }
 
                 .episode__container-text{
                     max-width: 100%;
+                    overflow: hidden;
+                    margin: 20px 20px 0 20px;
 
                     h1{
                         width: 100%;
@@ -229,7 +253,7 @@
             
 
             .container__player{
-
+                height: 8rem;
                 .player{
                     flex-direction: column;
                     width: 100%;
@@ -315,12 +339,12 @@
                     border-radius: 0;
                     overflow: hidden;
                     width: 100%;
-                    height: 45vh;
+                    height: 55vh;
                     
                     
                     img{
-                        width: 100%;
-                        height: 45vh;
+                        width: 105%;
+                        height: 55vh;
                         position: absolute;
                     }
                 }
@@ -329,11 +353,12 @@
 
                     h1{
                         width: 100%;
-                        font-size: 1.5rem;
+                        font-size: 1.6rem;
                     }
 
                     p{
                         width: 100%;
+                        font-size: 1.2rem;
                     }
                 }
             }
@@ -426,12 +451,12 @@
                     border-radius: 0;
                     overflow: hidden;
                     width: 100%;
-                    height: 45vh;
+                    height: 70vh;
                     
                     
                     img{
                         width: 100%;
-                        height: 50vh;
+                        height: 70vh;
                         position: absolute;
                     }
                 }
@@ -440,11 +465,12 @@
 
                     h1{
                         width: 100%;
-                        font-size: 1.5rem;
+                        font-size: 1.7rem;
                     }
 
                     p{
                         width: 100%;
+                        font-size: 1.3rem;
                     }
                 }
             }
@@ -475,7 +501,25 @@
 }
 
 // Dispositivos large (desktops com 992px ou mais)
-@media (min-width: 992px) and (max-width: 1199.98px) {}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    body{
+        .container__episode{
+
+            .episode__infomartions{
+                max-height: 45vh;
+            }
+        }
+    }
+}
 
 // Dispositivos extra large (desktops grandes com 1200px ou mais)
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+    body{
+        .container__episode{
+
+            .episode__infomartions{
+                max-height: 45vh;
+            }
+        }
+    }
+}

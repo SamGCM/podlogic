@@ -23,6 +23,7 @@
     .episode__infomartions{
         display: flex;
         flex-wrap: initial;
+        
         .episode__container-img{
             position: relative;
             margin: 30px 0 0 40px;
@@ -31,7 +32,7 @@
             width: 50rem;
             height: 18rem;
             img{
-                width: 100%;
+                width: 110%;
                 height: 100%;
                 position: absolute;
             }
@@ -61,14 +62,27 @@
                 width: 80%; // MUDAR PARA 95%
             }
 
-            a{
-                color: #49B7E6;
-                font-size: 1.2rem;
-                letter-spacing: 0px;
+            .container__read-more{
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+
+                span{
+                    display: flex;
+                    align-items: center;
+                    color: #49B7E6;
+                    font-size: 1.2rem;
+                    letter-spacing: 0px;
+                    margin: 0;
+                }
+
+                img{
+                    width: 1rem;
+                    margin-left: 0.5rem;
+                }
             }
 
             span{
-                margin-top: 10px;
                 font-size: 0.8rem;
                 letter-spacing: 2px;
                 color: rgba(255, 255, 255, 0.651);
@@ -102,7 +116,7 @@
                     width: 1rem;
                     background: white;
                     border-radius: 50%;
-                    padding: 15px 20px 15px 20px;
+                    padding: 15px;
                     width: 1rem;
                     cursor: pointer;
                     img{
@@ -132,7 +146,7 @@
                     cursor: pointer;
                     background: white;
                     border-radius: 50%;
-                    padding: 15px 20px 15px 20px;
+                    padding: 15px;
                     width: 1rem;
                     img{
                         width: 1rem;

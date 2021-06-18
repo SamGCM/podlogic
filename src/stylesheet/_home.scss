@@ -76,11 +76,21 @@ $height-container: 30rem;
                 width: 85%; // MUDAR PARA 95%
                 margin-bottom: 10px;
             }
-            a{
-                color: #49B7E6;
-                font-size: 1.2rem;
-                letter-spacing: 0px;
-                
+            .container__read-more{
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                span{
+                    display: flex;
+                    align-items: center;
+                    color: #49B7E6;
+                    font-size: 1.2rem;
+                    letter-spacing: 0px;
+                }
+                img{
+                    width: 1rem;
+                    margin-left: 0.5rem;
+                }
             }
         }
 
