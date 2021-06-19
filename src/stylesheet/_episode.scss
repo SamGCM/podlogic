@@ -19,6 +19,9 @@
     position: relative;
     flex-direction: column;
     justify-content: space-between;
+
+    animation-name: fade;
+    animation-duration: 1.5s;
     
     .episode__infomartions{
         display: flex;
@@ -47,7 +50,7 @@
             height: 18rem;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             font-weight: normal;
-
+            overflow: auto;
             h1{
                 font-size: 2rem;
                 width: 80%;
@@ -66,6 +69,7 @@
                 cursor: pointer;
                 display: flex;
                 align-items: center;
+                
 
                 span{
                     display: flex;
@@ -100,7 +104,8 @@
         .player{
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-around;
+            height: 100%;
             flex-direction: row;
             .player__controls{
                 display: flex;
@@ -170,12 +175,12 @@
         border-radius: 10px;
         position: relative;
         width: 34rem;
-        height: 11px;
+        height: 8px;
         outline: none;
 
         &::before{
             content: '';
-            height: 11px;
+            height: 8px;
             width: $seek-before-width;
             background-color: $seek-before-color;
             border-radius: 10px;
@@ -245,4 +250,16 @@
         }
     }
     
+}
+
+@keyframes fade {
+    0%{
+        left: 100%;
+        opacity:20%;
+    }
+
+    100%{
+        left: 0;
+        opacity:80%;
+    }
 }

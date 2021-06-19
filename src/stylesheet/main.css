@@ -246,6 +246,10 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
 }
 
 .container__episode .episode__infomartions {
@@ -286,6 +290,7 @@ a {
   height: 18rem;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: normal;
+  overflow: auto;
 }
 
 .container__episode .episode__infomartions .episode__container-text h1 {
@@ -357,9 +362,9 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -452,13 +457,13 @@ a {
   border-radius: 10px;
   position: relative;
   width: 34rem;
-  height: 11px;
+  height: 8px;
   outline: none;
 }
 
 .container__episode .progressBar::before {
   content: '';
-  height: 11px;
+  height: 8px;
   width: var(--seek-before-width);
   background-color: #319BC8;
   border-radius: 10px;
@@ -533,6 +538,28 @@ a {
   vertical-align: middle;
 }
 
+@-webkit-keyframes fade {
+  0% {
+    left: 100%;
+    opacity: 20%;
+  }
+  100% {
+    left: 0;
+    opacity: 80%;
+  }
+}
+
+@keyframes fade {
+  0% {
+    left: 100%;
+    opacity: 20%;
+  }
+  100% {
+    left: 0;
+    opacity: 80%;
+  }
+}
+
 @media (max-width: 375.98px) {
   body .container {
     overflow: initial;
@@ -598,8 +625,10 @@ a {
   body .container__episode {
     overflow: initial;
     max-height: initial;
-    height: 100%;
+    height: 100vh;
     margin: 0;
+    -ms-flex-wrap: initial;
+        flex-wrap: initial;
   }
   body .container__episode #btnClose {
     right: 10px;
@@ -629,14 +658,22 @@ a {
   body .container__episode .episode__infomartions .episode__container-text {
     max-width: 100%;
     overflow: hidden;
-    margin: 30px 20px 0 20px;
+    margin: 0 20px 0 20px;
   }
   body .container__episode .episode__infomartions .episode__container-text h1 {
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+  }
+  body .container__episode .episode__infomartions .episode__container-text .container__read-more {
+    font-size: 1rem;
+  }
+  body .container__episode .episode__infomartions .episode__container-text .container__read-more img {
+    width: 0.9rem;
   }
   body .container__episode .episode__infomartions .episode__container-text p {
     width: 100%;
+    font-size: 0.9rem;
+    overflow: auto;
   }
   body .container__episode .container__player {
     height: 7.5rem;
@@ -647,6 +684,21 @@ a {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100%;
+  }
+  body .container__episode .container__player .player .player__controls {
+    width: 9rem;
+  }
+  body .container__episode .container__player .player .player__controls #btnPrevious {
+    padding: 9px;
+  }
+  body .container__episode .container__player .player .player__controls #btnPlay {
+    padding: 10px;
+  }
+  body .container__episode .container__player .player .player__controls #btnPlay img {
+    width: 1.5rem;
+  }
+  body .container__episode .container__player .player .player__controls #btnNext {
+    padding: 9px;
   }
   body .container__episode .container__player .container__progress-audio {
     width: 100%;
@@ -659,6 +711,7 @@ a {
   }
   body .container__episode .container__player .container__progress-audio .container__progressBar .progressBar {
     width: 100%;
+    height: 5px;
   }
 }
 
@@ -701,8 +754,10 @@ a {
   body .container__episode {
     overflow: initial;
     max-height: initial;
-    height: 100%;
+    height: 100vh;
     margin: 0;
+    -ms-flex-wrap: initial;
+        flex-wrap: initial;
   }
   body .container__episode #btnClose {
     right: 12px;
@@ -735,6 +790,7 @@ a {
     max-width: 100%;
     overflow: hidden;
     margin: 20px 20px 0 20px;
+    height: 75%;
   }
   body .container__episode .episode__infomartions .episode__container-text h1 {
     width: 100%;
@@ -742,6 +798,7 @@ a {
   }
   body .container__episode .episode__infomartions .episode__container-text p {
     width: 100%;
+    overflow: auto;
   }
   body .container__episode .container__player {
     height: 8rem;
@@ -764,6 +821,7 @@ a {
   }
   body .container__episode .container__player .container__progress-audio .container__progressBar .progressBar {
     width: 100%;
+    height: 5px;
   }
 }
 
@@ -906,7 +964,7 @@ a {
   body .container__episode {
     overflow: initial;
     max-height: initial;
-    height: 100%;
+    height: 100vh;
     margin: 0;
   }
   body .container__episode .episode__infomartions {
@@ -919,11 +977,11 @@ a {
     border-radius: 0;
     overflow: hidden;
     width: 100%;
-    height: 70vh;
+    height: 50vh;
   }
   body .container__episode .episode__infomartions .episode__container-img img {
-    width: 100%;
-    height: 70vh;
+    width: 110%;
+    height: 50vh;
     position: absolute;
   }
   body .container__episode .episode__infomartions .episode__container-text {
