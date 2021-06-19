@@ -1,7 +1,14 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
+
+// Hooks para pegar informações de todos os episódios e importalos para views
+
+
 export function Episode1Info (){
+
+    //Criado o state inicial 
+
     const [infoEpisodes, setInfoEpisodes] = useState({
         id: '',
         name: '',
@@ -15,12 +22,15 @@ export function Episode1Info (){
 
     const getInfo = async function ( ) {
     const url = 'https://api-frontend-test.brlogic.com/podcast/episodes/365/details.json'
+
+    // Fazendo requisição
     await axios.get(url)
         .then( response => {
             setInfoEpisodes(response.data)
         })
     }
 
+    // Fazer a requisição ser executada somente uma vez por renderização
     useEffect(( ) => {
     getInfo()
     }, [])
@@ -28,6 +38,9 @@ export function Episode1Info (){
     return infoEpisodes
     
 }
+
+
+
 
 export function Episode2Info (){
     const [infoEpisodes, setInfoEpisodes] = useState({
@@ -57,6 +70,10 @@ export function Episode2Info (){
     
 }
 
+
+
+
+
 export function Episode3Info (){
     const [infoEpisodes, setInfoEpisodes] = useState({
         id: '',
@@ -84,6 +101,11 @@ export function Episode3Info (){
     return infoEpisodes
     
 }
+
+
+
+
+
 
 export function Episode4Info (){
     const [infoEpisodes, setInfoEpisodes] = useState({
@@ -113,6 +135,11 @@ export function Episode4Info (){
     
 }
 
+
+
+
+
+
 export function Episode5Info (){
     const [infoEpisodes, setInfoEpisodes] = useState({
         id: '',
@@ -140,6 +167,11 @@ export function Episode5Info (){
     return infoEpisodes
     
 }
+
+
+
+
+
 
 export function Episode6Info (){
     const [infoEpisodes, setInfoEpisodes] = useState({
