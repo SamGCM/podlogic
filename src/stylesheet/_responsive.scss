@@ -245,7 +245,7 @@
         .container__episode{
             overflow: initial;
             max-height: initial;
-            height: 100%;
+            height: 100vh;
             margin: 0;
             flex-wrap: initial;
             #btnClose{
@@ -260,7 +260,7 @@
             .episode__infomartions{
                 flex-wrap: wrap;
                 overflow: hidden;
-                max-height: 90vh;
+                height: 83vh;
 
                 .episode__container-img{
                     position: relative;
