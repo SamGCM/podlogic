@@ -228,8 +228,8 @@
             height: 8px;
         }
         &::-ms-thumb{
-            height: 13px;
-            width: 13px;
+            height: 11px;
+            width: 10px;
             border-radius: 50%;
             border: transparent;
             background-color: $knobby;
@@ -261,8 +261,8 @@
 
         &::-webkit-slider-thumb{
             appearance: none;
-            height: 13px;
-            width: 13px;
+            height: 11px;
+            width: 10px;
             border-radius: 50%;
             border: none;
             background-color: $knobby;
