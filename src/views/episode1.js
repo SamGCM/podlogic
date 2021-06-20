@@ -48,10 +48,10 @@ function Episode1(){
     const [isPlaying, setIsPlaying] = useState(false);
     const [duration, setDuration] = useState(0)
     const [currentTime, setCurrentTime] = useState(0)
-    const [height, setHeight] = useState('70px')
+    const [height, setHeight] = useState('40%')
     const [rotation, setRotation] = useState('rotate(0deg)')
     const [btnMoreText, readLess] = useState('Ler mais')
-    const [containerHeight, setContainerHeight] = useState('19rem')
+    const [containerHeight, setContainerHeight] = useState('55%')
 
 
     
@@ -181,15 +181,14 @@ function Episode1(){
                         <div className='episode__container-img'>
                             <img src={episode1['cover']} alt='' />
                         </div>
-                        
                         <div ref={episodeContainerText} className='episode__container-text' >
                             <h1>Episódio {episode1['episodeNumber']} - {episode1['name']}</h1>
                             <p ref={text}>  {episode1['description']}</p>
                             <div className='container__read-more' onClick={() => {
-                                setHeight(height === '70px' ? '9.5rem' :'70px')
+                                setHeight(height === '40%' ? '50%' :'40%')
                                 setRotation(rotation === 'rotate(0deg)' ? 'rotate(180deg)' : 'rotate(0deg)')
                                 readLess(btnMoreText === 'Ler mais' ? 'Ler menos' : 'Ler mais')
-                                setContainerHeight(containerHeight === '19rem' ? '18rem' : '19rem')
+                                setContainerHeight(containerHeight === '55%' ? '60%' : '55%')
                             }}>
                                 <span ref={readMore} >Ler mais</span>
                                 <img ref={downArrow} src={iconDownArrow} alt=''/>

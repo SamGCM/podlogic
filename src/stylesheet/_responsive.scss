@@ -87,6 +87,8 @@
 
             .episode__infomartions{
                 flex-wrap: wrap;
+                align-content: flex-start;
+                max-height: 75%;
 
                 .episode__container-img{
                     position: relative;
@@ -107,24 +109,33 @@
                     max-width: 100%;
                     overflow: hidden;
                     margin: 0 20px 0 20px;
+                    justify-content: initial;
 
                     h1{
                         width: 100%;
                         font-size: 1.2rem;
+                        margin: 20px auto;
                     }
+
 
                     .container__read-more{
                         font-size: 1rem;
-                        
+                        margin-top: 5px;
                         img{
-                            width: 0.9rem;
+                            width: 1rem;
                         }
                     }
 
                     p{
+                        margin-top: 5px;
                         width: 100%;
-                        font-size: 0.9rem;
+                        font-size: 1rem;
                         overflow: auto;
+                        
+                    }
+
+                    span{
+                        margin-top: 5%;
                     }
                 }
             }
@@ -136,6 +147,7 @@
                 .player{
                     flex-direction: column;
                     width: 100%;
+                    height: 100px;
 
                     .player__controls{
                         width: 9rem;
