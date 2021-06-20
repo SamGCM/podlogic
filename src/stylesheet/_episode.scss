@@ -19,12 +19,13 @@
     flex-direction: column;
     justify-content: space-between;
 
-    animation-name: fade;
-    animation-duration: 1s;
+    
     
     .episode__infomartions{
         display: flex;
         flex-wrap: initial;
+        animation-name: fade;
+        animation-duration: 1s;
         
         .episode__container-img{
             position: relative;
