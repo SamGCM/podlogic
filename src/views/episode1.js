@@ -48,10 +48,10 @@ function Episode1(){
     const [isPlaying, setIsPlaying] = useState(false);
     const [duration, setDuration] = useState(0)
     const [currentTime, setCurrentTime] = useState(0)
-    const [height, setHeight] = useState('40%')
+    const [height, setHeight] = useState('33%')
     const [rotation, setRotation] = useState('rotate(0deg)')
     const [btnMoreText, readLess] = useState('Ler mais')
-    const [containerHeight, setContainerHeight] = useState('55%')
+    const [containerHeight, setContainerHeight] = useState('18rem')
 
 
     
@@ -185,10 +185,10 @@ function Episode1(){
                             <h1>Episódio {episode1['episodeNumber']} - {episode1['name']}</h1>
                             <p ref={text}>  {episode1['description']}</p>
                             <div className='container__read-more' onClick={() => {
-                                setHeight(height === '40%' ? '50%' :'40%')
+                                setHeight(height === '33%' ? '50%' :'33%')
                                 setRotation(rotation === 'rotate(0deg)' ? 'rotate(180deg)' : 'rotate(0deg)')
                                 readLess(btnMoreText === 'Ler mais' ? 'Ler menos' : 'Ler mais')
-                                setContainerHeight(containerHeight === '55%' ? '60%' : '55%')
+                                setContainerHeight(containerHeight === '18rem' ? '18rem' : '18rem')
                             }}>
                                 <span ref={readMore} >Ler mais</span>
                                 <img ref={downArrow} src={iconDownArrow} alt=''/>
