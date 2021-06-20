@@ -246,8 +246,8 @@ a {
           justify-content: space-between;
   -webkit-animation-name: fade;
           animation-name: fade;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .container__episode .episode__infomartions {
@@ -540,22 +540,18 @@ a {
 
 @-webkit-keyframes fade {
   0% {
-    left: 100%;
     opacity: 20%;
   }
   100% {
-    left: 0;
     opacity: 100%;
   }
 }
 
 @keyframes fade {
   0% {
-    left: 100%;
     opacity: 20%;
   }
   100% {
-    left: 0;
     opacity: 100%;
   }
 }
@@ -792,7 +788,7 @@ a {
     border-radius: 0;
     overflow: hidden;
     width: 100%;
-    height: 37vh;
+    height: 40vh;
   }
   body .container__episode .episode__infomartions .episode__container-img img {
     width: 110%;
@@ -802,7 +798,7 @@ a {
   body .container__episode .episode__infomartions .episode__container-text {
     max-width: 100%;
     overflow: hidden;
-    margin: 20px 20px 0 20px;
+    margin: 20px 20px 5px;
     height: 75%;
   }
   body .container__episode .episode__infomartions .episode__container-text h1 {
