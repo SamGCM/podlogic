@@ -642,14 +642,11 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-left: 10px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-left: 0;
   }
   body .container #container__right #box-list #box-list__title {
     margin-bottom: 20px;
@@ -658,22 +655,12 @@ a {
     overflow: initial;
     max-height: 160vh;
   }
-  body .container #container__right #box-list #box-list__episodes .episode__item a {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
   body .container #container__right #box-list #box-list__episodes .episode__item a .episode__about {
-    max-width: 95%;
-    text-align: center;
-    margin-left: 0;
+    max-width: 55%;
+    margin-left: 10px;
   }
   body .container #container__right #box-list #box-list__episodes .episode__item a .episode__about h1 {
     font-size: 1rem;
-  }
-  body .container #container__right #box-list #box-list__episodes .episode__item a .episode__about p {
-    display: none;
   }
   body .container__episode {
     overflow: initial;
@@ -721,27 +708,30 @@ a {
   }
   body .container__episode .episode__infomartions .episode__container-text h1 {
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 20px auto;
   }
   body .container__episode .episode__infomartions .episode__container-text .container__read-more {
-    font-size: 1rem;
     margin-top: 5px;
   }
+  body .container__episode .episode__infomartions .episode__container-text .container__read-more span {
+    font-size: 0.9rem;
+  }
   body .container__episode .episode__infomartions .episode__container-text .container__read-more img {
-    width: 1rem;
+    width: 0.9rem;
   }
   body .container__episode .episode__infomartions .episode__container-text p {
     margin-top: 5px;
     width: 100%;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     overflow: auto;
   }
   body .container__episode .episode__infomartions .episode__container-text span {
     margin-top: 5%;
+    font-size: 0.7rem;
   }
   body .container__episode .container__player {
-    height: 7.5rem;
+    height: 5rem;
   }
   body .container__episode .container__player .player {
     -webkit-box-orient: vertical;
@@ -749,7 +739,7 @@ a {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100%;
-    height: 100px;
+    height: 80px;
   }
   body .container__episode .container__player .player .player__controls {
     width: 9rem;
@@ -777,6 +767,19 @@ a {
   }
   body .container__episode .container__player .container__progress-audio .container__progressBar .progressBar {
     width: 100%;
+    height: 5px;
+  }
+  body .container__episode .container__player .container__progress-audio .container__progressBar .progressBar::-webkit-slider-runnable-track {
+    height: 5px;
+  }
+  body .container__episode .container__player .container__progress-audio .container__progressBar .progressBar::-ms-track {
+    height: 5px;
+  }
+  body .container__episode .container__player .container__progress-audio .container__progressBar .progressBar::-moz-range-progress {
+    height: 5px;
+  }
+  body .container__episode .container__player .container__progress-audio .container__progressBar .progressBar::before {
+    content: '';
     height: 5px;
   }
 }
@@ -849,7 +852,7 @@ a {
   }
   body .container__episode .episode__infomartions .episode__container-img img {
     width: 110%;
-    height: 35vh;
+    height: 40vh;
     position: absolute;
   }
   body .container__episode .episode__infomartions .episode__container-text {
@@ -891,6 +894,19 @@ a {
   }
   body .container__episode .container__player .container__progress-audio .container__progressBar .progressBar {
     width: 100%;
+    height: 5px;
+  }
+  body .container__episode .container__player .container__progress-audio .container__progressBar .progressBar::-webkit-slider-runnable-track {
+    height: 5px;
+  }
+  body .container__episode .container__player .container__progress-audio .container__progressBar .progressBar::-ms-track {
+    height: 5px;
+  }
+  body .container__episode .container__player .container__progress-audio .container__progressBar .progressBar::-moz-range-progress {
+    height: 5px;
+  }
+  body .container__episode .container__player .container__progress-audio .container__progressBar .progressBar::before {
+    content: '';
     height: 5px;
   }
 }
@@ -950,11 +966,11 @@ a {
     border-radius: 0;
     overflow: hidden;
     width: 100%;
-    height: 55vh;
+    height: 40vh;
   }
   body .container__episode .episode__infomartions .episode__container-img img {
     width: 105%;
-    height: 55vh;
+    height: 45vh;
     position: absolute;
   }
   body .container__episode .episode__infomartions .episode__container-text {
@@ -1051,7 +1067,7 @@ a {
   }
   body .container__episode .episode__infomartions .episode__container-img img {
     width: 110%;
-    height: 50vh;
+    height: 55vh;
     position: absolute;
   }
   body .container__episode .episode__infomartions .episode__container-text {

@@ -21,7 +21,7 @@
             #container__right{
                 width: 100%;
                 height: 100%;
-
+                
                 #about{
                     display: none;
                 }
@@ -29,9 +29,8 @@
                 #box-list{
                     margin-top: 30px;
                     display: flex;
+                    margin-left: 10px;
                     flex-direction: column;
-                    align-items: center;
-                    margin-left: 0;
 
                     #box-list__title{
                         margin-bottom: 20px;
@@ -45,19 +44,17 @@
                         .episode__item{
 
                             a{
-                                flex-direction: column;
 
                                 .episode__about{
-                                    max-width: 95%;
-                                    text-align: center;
-                                    margin-left: 0;
+                                    max-width: 55%;
+                                    margin-left: 10px;
 
                                     h1{
                                         font-size: 1rem;
                                     }
 
                                     p{
-                                        display: none;
+
                                     }
                                 }
                                 
@@ -113,29 +110,35 @@
 
                     h1{
                         width: 100%;
-                        font-size: 1.2rem;
+                        font-size: 1rem;
                         margin: 20px auto;
                     }
 
 
                     .container__read-more{
-                        font-size: 1rem;
+                        
                         margin-top: 5px;
+
+                        span{
+                            font-size: 0.9rem;
+                        }
+
                         img{
-                            width: 1rem;
+                            width: 0.9rem;
                         }
                     }
 
                     p{
                         margin-top: 5px;
                         width: 100%;
-                        font-size: 1.1rem;
+                        font-size: 0.9rem;
                         overflow: auto;
                         
                     }
 
                     span{
                         margin-top: 5%;
+                        font-size: 0.7rem;
                     }
                 }
             }
@@ -143,11 +146,11 @@
             
 
             .container__player{
-                height: 7.5rem;
+                height: 5rem;
                 .player{
                     flex-direction: column;
                     width: 100%;
-                    height: 100px;
+                    height: 80px;
 
                     .player__controls{
                         width: 9rem;
@@ -179,6 +182,27 @@
                         .progressBar{
                             width: 100%;
                             height: 5px;
+
+                                                // SAFARI
+                            &::-webkit-slider-runnable-track{
+                                height: 5px;
+                            }
+
+                                //Mozilla
+                            &::-ms-track{
+                                height: 5px;
+                            }
+
+                            &::-moz-range-progress{
+                                height: 5px;
+                            }
+
+
+                            // chrome e safari
+                            &::before{
+                                content: '';
+                                height: 5px;
+                            }
                         }
                     }
                 }
@@ -272,7 +296,7 @@
                     
                     img{
                         width: 110%;
-                        height: 35vh;
+                        height: 40vh;
                         position: absolute;
                     }
                 }
@@ -318,6 +342,27 @@
                         .progressBar{
                             width: 100%;
                             height: 5px;
+
+                            // SAFARI
+                            &::-webkit-slider-runnable-track{
+                                height: 5px;
+                            }
+
+                                //Mozilla
+                            &::-ms-track{
+                                height: 5px;
+                            }
+
+                            &::-moz-range-progress{
+                                height: 5px;
+                            }
+
+
+                            // chrome e safari
+                            &::before{
+                                content: '';
+                                height: 5px;
+                            }
                         }
                     }
                 }
@@ -390,12 +435,12 @@
                     border-radius: 0;
                     overflow: hidden;
                     width: 100%;
-                    height: 55vh;
+                    height: 40vh;
                     
                     
                     img{
                         width: 105%;
-                        height: 55vh;
+                        height: 45vh;
                         position: absolute;
                     }
                 }
@@ -507,7 +552,7 @@
                     
                     img{
                         width: 110%;
-                        height: 50vh;
+                        height: 55vh;
                         position: absolute;
                     }
                 }

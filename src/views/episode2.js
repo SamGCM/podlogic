@@ -48,10 +48,10 @@ function Episode2(){
     const [isPlaying, setIsPlaying] = useState(false);
     const [duration, setDuration] = useState(0)
     const [currentTime, setCurrentTime] = useState(0)
-    const [height, setHeight] = useState('70px')
+    const [height, setHeight] = useState('33%')
     const [rotation, setRotation] = useState('rotate(0deg)')
     const [btnMoreText, readLess] = useState('Ler mais')
-    const [containerHeight, setContainerHeight] = useState('20rem')
+    const [containerHeight, setContainerHeight] = useState('16rem')
 
 
     
