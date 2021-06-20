@@ -763,7 +763,7 @@ a {
   body .container__episode {
     overflow: initial;
     max-height: initial;
-    height: 100vh;
+    height: 100%;
     margin: 0;
     -ms-flex-wrap: initial;
         flex-wrap: initial;
