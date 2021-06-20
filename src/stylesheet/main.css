@@ -505,8 +505,8 @@ a {
 }
 
 .container__episode .progressBar::-ms-thumb {
-  height: 13px;
-  width: 13px;
+  height: 11px;
+  width: 10px;
   border-radius: 50%;
   border: transparent;
   background-color: #1aaeee;
@@ -537,8 +537,8 @@ a {
 .container__episode .progressBar::-webkit-slider-thumb {
   -webkit-appearance: none;
           appearance: none;
-  height: 13px;
-  width: 13px;
+  height: 11px;
+  width: 10px;
   border-radius: 50%;
   border: none;
   background-color: #1aaeee;
