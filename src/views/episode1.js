@@ -51,7 +51,7 @@ function Episode1(){
     const [height, setHeight] = useState('33%')
     const [rotation, setRotation] = useState('rotate(0deg)')
     const [btnMoreText, readLess] = useState('Ler mais')
-    const [containerHeight, setContainerHeight] = useState('18rem')
+    const [containerHeight, setContainerHeight] = useState('16rem')
 
 
     
@@ -188,7 +188,7 @@ function Episode1(){
                                 setHeight(height === '33%' ? '50%' :'33%')
                                 setRotation(rotation === 'rotate(0deg)' ? 'rotate(180deg)' : 'rotate(0deg)')
                                 readLess(btnMoreText === 'Ler mais' ? 'Ler menos' : 'Ler mais')
-                                setContainerHeight(containerHeight === '18rem' ? '18rem' : '18rem')
+                                setContainerHeight(containerHeight === '16rem' ? '18rem' : '16rem')
                             }}>
                                 <span ref={readMore} >Ler mais</span>
                                 <img ref={downArrow} src={iconDownArrow} alt=''/>
