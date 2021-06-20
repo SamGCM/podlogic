@@ -27,7 +27,6 @@ yarn start
 
 ## 🛠️ Construído com
 
-Mencione as ferramentas que você usou para criar seu projeto
 
 * [React.js](https://pt-br.reactjs.org/) - O framework web usado
 * [SASS E SCSS](https://sass-lang.com/) - Usado como preprocessador
