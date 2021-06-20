@@ -679,7 +679,7 @@ a {
   body .container__episode .episode__infomartions .episode__container-text p {
     margin-top: 5px;
     width: 100%;
-    font-size: 1rem;
+    font-size: 1.1rem;
     overflow: auto;
   }
   body .container__episode .episode__infomartions .episode__container-text span {
