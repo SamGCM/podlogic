@@ -865,7 +865,10 @@ a {
   body .container__episode .episode__infomartions .episode__container-text p {
     width: 100%;
     overflow: auto;
-    margin-top: 20px;
+    margin-top: 10px;
+  }
+  body .container__episode .episode__infomartions .episode__container-text span {
+    margin-top: 10px;
   }
   body .container__episode .container__player {
     height: 8rem;
