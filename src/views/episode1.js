@@ -115,7 +115,8 @@ function Episode1(){
     }
     
     const changePlayerCurrentTime = () => {
-        progressBar.current.style.setProperty('--seek-before-width', `${progressBar.current.value / duration * 100}%`)
+        progressBar.current.style.setProperty('--seek-before-width',
+        `${progressBar.current.value / duration * 100}%`)
         setCurrentTime(progressBar.current.value)
     }
     
@@ -200,19 +201,22 @@ function Episode1(){
                         
                     </div>
                     <div className='container__player'>
-                    <div className='player'> {/* Foi adicionado um áudio diferente neste apenas para demosntração de som */}
-                        <audio ref={audioPlayer} src='https://d3ctxlq1ktw2nl.cloudfront.net/staging/2020-02-18/55254291cdb4f532ef4de1d67134e192.m4a'/>
+                    <div className='player'>
+                        {/* Foi adicionado um áudio diferente neste apenas para demosntração de som */}
+                        <audio ref={audioPlayer} src='https://d3ctxlq1ktw2nl.cloudfront.net/staging/
+                        2020-02-18/55254291cdb4f532ef4de1d67134e192.m4a'/>
                         
                         <div className='container__progress-audio'>
                             {/* Current time */}
 
                             <div className='currentTime'>
-                            {convertTime(currentTime)}
+                                {convertTime(currentTime)}
                             </div>
 
                             {/* Progress bar */}
                             <div className='container__progressBar'>
-                                <input type='range' className='progressBar' defaultValue='0' ref={progressBar} onChange={changeRange}/>
+                                <input type='range' className='progressBar' defaultValue='0'
+                                ref={progressBar} onChange={changeRange}/>
                             </div>
 
 

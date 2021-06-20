@@ -290,6 +290,7 @@
                     p{
                         width: 100%;
                         overflow: auto;
+                        margin-top: 20px;
                     }
                 }
             }
@@ -516,7 +517,11 @@
 
                     p{
                         width: 100%;
-                        font-size: 1.3rem;
+                        font-size: 1.5rem;
+                    }
+                    
+                    #participants{
+                        font-size: 1rem;
                     }
                 }
             }
@@ -553,6 +558,7 @@
 
             .episode__infomartions{
                 max-height: 45vh;
+                align-items: center;
             }
         }
     }
@@ -565,6 +571,7 @@
 
             .episode__infomartions{
                 max-height: 45vh;
+                align-items: center;
             }
         }
     }

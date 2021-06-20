@@ -25,7 +25,7 @@
         display: flex;
         flex-wrap: initial;
         animation-name: fade;
-        animation-duration: 1s;
+        animation-duration: 1.5s;
         
         .episode__container-img{
             position: relative;
@@ -63,6 +63,23 @@
                 max-height: 76px;
                 overflow: auto;
                 width: 80%;
+
+                //Scrollbar dentro do texto sobre o episodio
+
+                &::-webkit-scrollbar{
+                    width: 3px;
+                }
+        
+                &::-webkit-scrollbar-track{
+                    background: transparent;
+                }
+        
+                &::-webkit-scrollbar-thumb {
+                background: #E5DCD7;   
+                border-radius: 20px;
+                border: 1px solid #e0e0e0;
+                
+                }
                 
             }
 
@@ -179,6 +196,56 @@
         height: 8px;
         outline: none;
 
+            // SAFARI
+        &::-webkit-slider-runnable-track{
+            appearance: none;
+            background: $bar-bg;
+            border-radius: 10px;
+            position: relative;
+            width: 34rem;
+            height: 8px;
+            outline: none;
+        }
+
+            //Mozilla
+        &::-ms-track{
+            appearance: none;
+            background: $bar-bg;
+            border-radius: 10px;
+            position: relative;
+            width: 34rem;
+            height: 8px;
+            outline: none;
+        }
+
+        &::-moz-focus-outer{
+            border: 0;
+        }
+
+        &::-moz-range-progress{
+            background-color: $seek-before-color;
+            border-radius: 10px;
+            height: 8px;
+        }
+        &::-ms-thumb{
+            height: 13px;
+            width: 13px;
+            border-radius: 50%;
+            border: transparent;
+            background-color: $knobby;
+            cursor: pointer;
+            position: relative;
+            z-index: 3;
+            box-sizing: border-box;
+        }
+
+        &:active:-ms-thumb{
+            transform: scale(1.2);
+            background: $selectedKnobby;
+        }
+
+
+        // chrome e safari
         &::before{
             content: '';
             height: 8px;
@@ -204,13 +271,9 @@
             margin: -2px 0 0 0;
             z-index: 3;
             box-sizing: border-box;
-            visibility: hidden;
             
         }
 
-        &:hover::-webkit-slider-thumb{
-            visibility: visible;
-        }
 
         &:active::-webkit-slider-thumb {
             transform: scale(1.2);
@@ -218,6 +281,9 @@
             
         }
     }
+
+    
+    
 
     .container__progress-audio{
         display: flex;
@@ -257,7 +323,7 @@
 
 @keyframes fade {
     0%{
-        opacity:20%;
+        opacity:0%;
     }
 
     100%{
