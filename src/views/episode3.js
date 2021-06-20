@@ -186,10 +186,10 @@ function Episode3(){
                             <h1>Episódio {episode3['episodeNumber']} - {episode3['name']}</h1>
                             <p ref={text}>  {episode3['description']}</p>
                             <div className='container__read-more' onClick={() => {
-                                setHeight(height === '70px' ? 'fit-content' :'70px')
+                                setHeight(height === '33%' ? '50%' :'33%')
                                 setRotation(rotation === 'rotate(0deg)' ? 'rotate(180deg)' : 'rotate(0deg)')
                                 readLess(btnMoreText === 'Ler mais' ? 'Ler menos' : 'Ler mais')
-                                setContainerHeight(containerHeight === '20rem' ? 'fit-content' : '20rem')
+                                setContainerHeight(containerHeight === '18rem' ? '18rem' : '18rem')
                             }}>
                                 <span ref={readMore} >Ler mais</span>
                                 <img ref={downArrow} src={iconDownArrow} alt=''/>
