@@ -88,7 +88,7 @@ function App() {
                     <ul id='box-list__episodes'>
                         <li className='episode__item'>
                         <Link to='/episode-1'>
-                            <div class='episode__container-img'>
+                            <div className='episode__container-img'>
                             <img className='episode__img' src={episode1['cover']} alt=''/>
                             </div>
                             <div className='episode__about'>
