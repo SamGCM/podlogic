@@ -86,6 +86,7 @@
                 flex-wrap: wrap;
                 align-content: flex-start;
                 max-height: 75%;
+                animation-duration: 0.8s;
 
                 .episode__container-img{
                     position: relative;
@@ -285,6 +286,7 @@
                 flex-wrap: wrap;
                 overflow: hidden;
                 height: 79vh;
+                animation-duration: 0.8s;
 
                 .episode__container-img{
                     position: relative;
@@ -429,6 +431,7 @@
 
             .episode__infomartions{
                 flex-wrap: wrap;
+                animation-duration: 0.8s;
                 .episode__container-img{
                     position: relative;
                     margin: 0;
