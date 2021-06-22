@@ -65,7 +65,8 @@ function App() {
     <div>
       <div className='container'>
                 <div id='container__left'>
-                    <img id='left__img' src={infoHome.cover} alt=''/>
+                    <img id='left__img' src={infoHome.cover} 
+                    alt='Fone de ouvido, microfone, se preparando para o podcast'/>
                     <div id='img__gradient-bottom'></div>
                     <h1> {infoHome.name}</h1>
                     <p>6 episódios</p>
@@ -80,7 +81,7 @@ function App() {
                         readLess(btnMoreText === 'Ler mais' ? 'Ler menos' : 'Ler mais')
                       }}>
                       <span ref={readMore} >Ler mais</span>
-                      <img ref={downArrow} src={iconDownArrow} alt=''/>
+                      <img ref={downArrow} src={iconDownArrow} alt='Icone de seta para ler mais'/>
                     </div>
                     </div>
                     <div id='box-list'>
@@ -89,7 +90,8 @@ function App() {
                         <li className='episode__item'>
                         <Link to='/episode-1'>
                             <div className='episode__container-img'>
-                            <img className='episode__img' src={episode1['cover']} alt=''/>
+                            <img className='episode__img' src={episode1['cover']} 
+                            alt='Episódio 1, mulher fala sobre cuidar das finanças pessoais'/>
                             </div>
                             <div className='episode__about'>
                             <h1 className='episode__title' >Episódio {episode1['episodeNumber']} - {episode1['name']}</h1>
@@ -100,7 +102,8 @@ function App() {
                         <li className='episode__item'>
                         <Link to='/episode-2' >
                             <div class='episode__container-img'>
-                            <img className='episode__img' src={episode2['cover']} alt=''/>
+                            <img className='episode__img' src={episode2['cover']}
+                            alt='Homem em frente a notebook, trabalhando home office, em casa'/>
                             </div>
                             <div className='episode__about'>
                             <h1 className='episode__title' >Episódio {episode2['episodeNumber']} - {episode2['name']}</h1>
@@ -111,7 +114,8 @@ function App() {
                         <li className='episode__item'>
                         <Link to='/episode-3'>
                             <div class='episode__container-img'>
-                            <img className='episode__img' src={episode3['cover']} alt=''/>
+                            <img className='episode__img' src={episode3['cover']}
+                            alt='Caixa de som com assistente virtual, alexa, google assistente, siri'/>
                             </div>
                             <div className='episode__about'>
                             <h1 className='episode__title' >Episódio {episode3['episodeNumber']} - {episode3['name']}</h1>
@@ -122,7 +126,8 @@ function App() {
                         <li className='episode__item'>
                         <Link to='/episode-4'>
                             <div class='episode__container-img'>
-                            <img className='episode__img' src={episode4['cover']} alt=''/>
+                            <img className='episode__img' src={episode4['cover']}
+                            alt='Enorme quantidade de carros em rodovia'/>
                             </div>
                             <div className='episode__about'>
                             <h1 className='episode__title' >Episódio {episode4['episodeNumber']} - {episode4['name']}</h1>
@@ -133,7 +138,8 @@ function App() {
                         <li className='episode__item'>
                         <Link to='/episode-5'>
                             <div class='episode__container-img'>
-                            <img className='episode__img' src={episode5['cover']} alt=''/>
+                            <img className='episode__img' src={episode5['cover']}
+                            alt='Homem sozinho, observando uma montanha'/>
                             </div>
                             <div className='episode__about'>
                             <h1 className='episode__title' >Episódio {episode5['episodeNumber']} - {episode5['name']}</h1>
@@ -144,7 +150,8 @@ function App() {
                         <li className='episode__item'>
                         <Link to='/episode-6'>
                             <div class='episode__container-img'>
-                            <img className='episode__img' src={episode6['cover']} alt=''/>
+                            <img className='episode__img' src={episode6['cover']}
+                            alt="mini letreiro decorativo, com a frase: 'Good bye friends'"/>
                             </div>
                             <div className='episode__about'>
                             <h1 className='episode__title' >Episódio {episode6['episodeNumber']} - {episode6['name']}</h1>

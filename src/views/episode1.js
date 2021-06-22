@@ -178,11 +178,11 @@ function Episode1(){
             <div>
                 <div className='container__episode'>
                 <a href='/' id='btnClose'>
-                    <img src={iconX} alt='' />
+                    <img src={iconX} alt='Icone de fechar episódio atual e voltar para o inicio' />
                 </a>
                     <div className='episode__infomartions'>
                         <div className='episode__container-img'>
-                            <img src={episode1['cover']} alt='' />
+                            <img src={episode1['cover']} alt='Mulher fala ao microfone em um estúdio de podcast' />
                         </div>
                         <div ref={episodeContainerText} className='episode__container-text' >
                             <h1>Episódio {episode1['episodeNumber']} - {episode1['name']}</h1>
@@ -194,7 +194,7 @@ function Episode1(){
                                 setContainerHeight(containerHeight === '16rem' ? '18rem' : '16rem')
                             }}>
                                 <span ref={readMore} >Ler mais</span>
-                                <img ref={downArrow} src={iconDownArrow} alt=''/>
+                                <img ref={downArrow} src={iconDownArrow} alt='Icone de seta para expandir o texto'/>
                             </div>
                             <span id='participants'>
                                 Participantes: {episode1['participants'].toString()}
@@ -229,13 +229,13 @@ function Episode1(){
                         
                         <div className='player__controls'>
                             <Link to={previous} id='btnPrevious'>
-                                <img src={iconNext} alt='' />
+                                <img src={iconNext} alt='Icone de avançar para próximo podcast' />
                             </Link>
                             <button id='btnPlay' onClick={togglePlayPause}>
-                                <img  src={isPlaying ? iconPause : iconPlay} alt='' />
+                                <img  src={isPlaying ? iconPause : iconPlay} alt='Icone de pausar ou continuar audio' />
                             </button>
                             <Link to={next} id='btnNext'>
-                                <img src={iconNext} alt='' />
+                                <img src={iconNext} alt='Icone de retroceder para podcast anterior' />
                             </Link>
                             
                         </div>

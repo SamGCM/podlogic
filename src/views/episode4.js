@@ -176,11 +176,11 @@ function Episode4(){
             <div>
                 <div className='container__episode'>
                 <a href='/' id='btnClose'>
-                    <img src={iconX} alt='' />
+                    <img src={iconX} alt='Icone de fechar episódio atual e voltar para o inicio' />
                 </a>
                     <div className='episode__infomartions'>
                         <div className='episode__container-img'>
-                            <img src={episode4['cover']} alt='' />
+                            <img src={episode4['cover']} alt='Enorme quantidade de carros em rodovia' />
                         </div>
                         
                         <div ref={episodeContainerText} className='episode__container-text' >
@@ -193,7 +193,7 @@ function Episode4(){
                                 setContainerHeight(containerHeight === '16rem' ? '18rem' : '16rem')
                             }}>
                                 <span ref={readMore} >Ler mais</span>
-                                <img ref={downArrow} src={iconDownArrow} alt=''/>
+                                <img ref={downArrow} src={iconDownArrow} alt='Icone de seta para expandir o texto'/>
                             </div>
                             <span id='participants'>
                                 Participantes: {episode4['participants'].toString()}
@@ -226,13 +226,13 @@ function Episode4(){
                         
                         <div className='player__controls'>
                             <Link to={previous} id='btnPrevious'>
-                                <img src={iconNext} alt='' />
+                                <img src={iconNext} alt='Icone de avançar para próximo podcast' />
                             </Link>
                             <button id='btnPlay' onClick={togglePlayPause}>
-                                <img  src={isPlaying ? iconPause : iconPlay} alt='' />
+                                <img  src={isPlaying ? iconPause : iconPlay} alt='Icone de pausar ou continuar audio' />
                             </button>
                             <Link to={next} id='btnNext'>
-                                <img src={iconNext} alt='' />
+                                <img src={iconNext} alt='Icone de retroceder para podcast anterior' />
                             </Link>
                             
                         </div>
