@@ -74,7 +74,6 @@ function Episode1(){
     },[audioPlayer?.current?.loadedmetadata, audioPlayer?.current?.readyState])
 
     
-
     
     
 
@@ -82,14 +81,16 @@ function Episode1(){
 
     const togglePlayPause = () => {
         const prevValue = isPlaying
-    
+        
         setIsPlaying(!prevValue);
         if(!prevValue){
         audioPlayer.current.play()
         animationRef.current = requestAnimationFrame(whilePlaying)
+        
         }else{
         audioPlayer.current.pause()
         cancelAnimationFrame(animationRef.current)
+        
         }
     }
 
@@ -115,9 +116,10 @@ function Episode1(){
     }
     
     const changePlayerCurrentTime = () => {
+        
         progressBar.current.style.setProperty('--seek-before-width',
-        `${progressBar.current.value / duration * 100}%`)
-        setCurrentTime(progressBar.current.value)
+        `${progressBar.current.value / Math.floor(audioPlayer.current.duration) * 100}%`)
+        setCurrentTime(parseInt(progressBar.current.value))
     }
     
 
@@ -215,7 +217,7 @@ function Episode1(){
                             {/* Progress bar */}
                             <div className='container__progressBar'>
                                 <input type='range' className='progressBar' defaultValue='0'
-                                ref={progressBar} onChange={changeRange}/>
+                                ref={progressBar} onChange={changeRange} minLength='0' />
                             </div>
 
 
