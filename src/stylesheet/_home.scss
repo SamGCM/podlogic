@@ -1,25 +1,27 @@
-$height-container: 30rem;
+$height-container: 41.8rem;
 
 .container{
     display: flex;
     flex-wrap: wrap;
     border-radius: 5px;
     overflow: hidden; 
-    max-width: 60rem;
+    max-width: 76.8rem;
     margin: 18vh auto;
     max-height: $height-container;
     background: #27657F;
     #container__left{
         position: relative;
-        width: 20rem;
+        width: 31.5rem;
         overflow: hidden;
         height: $height-container;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         #left__img{
             display: block;
-            max-width: 50rem;
-            width: 300%; 
+            width: 63.4rem; 
             height: $height-container;
-            left: -15rem;
+            left: -14rem;
             position: absolute;
 
         }
@@ -36,56 +38,52 @@ $height-container: 30rem;
             position: absolute;
             color: white;
             left: 20px;
-            -webkit-text-stroke-width: 0.2px;
-            -webkit-text-stroke-color: rgb(92, 92, 92);
-            text-shadow: -1px 0px 4px gray;
+            text-shadow: 0px 0px 5px gray;
         }
         h1{
             bottom: 10%;
-            font-size: 2.5rem;
             text-shadow: gray;
-            font-style: italic;
+            font: italic 700 3.4rem 'PT Sans', sans-serif;
         }
         p{
             bottom: 5%;
             font-size: 1rem;
-            font-family: monospace;
+            font: 700 1.6rem 'Raleway', sans-serif;
         }
 
     }
 
     #container__right{
         background: #27657F;
-        width: 40rem;
+        width: 45.3rem;
 
         #about{
-            margin-left: 20px;
+            margin-left: 3rem;
             #about__title{
-                margin: 20px 0 20px 0;
-                font-size: 0.8rem;
-                font-family: monospace;
-                letter-spacing: 2.5px;
+                margin: 3rem 0 1rem 0;
+                font: 800 .8rem 'Raleway', sans-serif;  
+                letter-spacing: .4rem;
                 color: rgba(255, 255, 255, 0.651);
             }
             
             #about__text{
-                font-size: 1.5rem;
-                letter-spacing: 0px;
-                max-height: 70px;
+                font: italic 600 1.6rem 'Raleway', sans-serif;
+                max-height: 6.8rem;
                 overflow: hidden;
                 width: 85%;
-                margin-bottom: 10px;
+                color: rgba(255, 255, 255, 0.651);
             }
             .container__read-more{
                 cursor: pointer;
                 display: flex;
                 align-items: center;
+
+                margin: 1rem 0 2rem 0;
                 span{
                     display: flex;
                     align-items: center;
                     color: #49B7E6;
-                    font-size: 1.2rem;
-                    letter-spacing: 0px;
+                    font: italic 600 1.6rem 'Raleway', sans-serif;
                 }
                 img{
                     width: 1rem;
@@ -97,18 +95,17 @@ $height-container: 30rem;
 
 
         #box-list{
-            margin-left: 20px;
-            margin-top: 10px;
+            margin-left: 3rem;
+
             #box-list__title{
-                font-size: 0.8rem;
-                font-family: monospace;
-                letter-spacing: 2px;
+                font: 800 .8rem 'Raleway', sans-serif;  
+                letter-spacing: .4rem;
                 color: rgba(255, 255, 255, 0.651);
-                margin-bottom: 5px;
+                margin-bottom: 1rem;
             }
 
             #box-list__episodes{
-                max-height: 18.5rem;
+                max-height: 23.4rem;
                 overflow: auto;
 
                 &::-webkit-scrollbar{
@@ -137,8 +134,8 @@ $height-container: 30rem;
                         flex: 1 1 300px;
                         align-items: center;
                         .episode__container-img{
-                            width: 100px;
-                            height: 100px;
+                            width: 7rem;
+                            height: 7rem;
                             border-radius: 10px;
                             display: flex;
                             align-items: center;
@@ -158,13 +155,12 @@ $height-container: 30rem;
                             margin-left: 15px;
                             max-width: 30rem;
                             .episode__title{
-                                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                            }
+                                font: 700 1.4rem 'Raleway', sans-serif;                            }
                             
                             .episode__duration{
                                 margin-top: 0.5rem;
-                                font-size: 1rem;
-                                font-weight: bold;
+                                font: 600 1.2rem 'Raleway', sans-serif;
+                                color: rgba(255, 255, 255, 0.651);
                             }
                         }
                     }

@@ -1,4 +1,4 @@
-@media (max-width: 375.98px) {
+@media (max-width: 439.98px) {
     body{
         .container{
             overflow: initial;
@@ -7,15 +7,27 @@
             #container__left{
                 max-width: initial;
                 left: initial;
-                width: 100%;
-                height: 20rem;
+                width: 50rem;
+                height: 33.1rem;
     
                 #left__img{
-                    width: 110%;
+                    width: 50rem;
                     max-width: initial;
                     left: initial;
-                    height: 100%;
+                    height: auto;
                 }
+
+                h1{
+                    margin-left: 3rem;
+                    left: 0;
+                }
+
+                p{
+                    margin-left: 3rem;
+                    left: 0;
+                }
+
+
             }
 
             #container__right{
@@ -27,13 +39,13 @@
                 }
 
                 #box-list{
-                    margin-top: 30px;
+                    margin-top: 3rem;
                     display: flex;
-                    margin-left: 10px;
+                    margin-left: 3rem;
                     flex-direction: column;
 
                     #box-list__title{
-                        margin-bottom: 20px;
+                        margin-bottom: 2rem;
                     }
 
                     
@@ -71,142 +83,121 @@
             max-height: initial;
             height: 100vh;
             margin: 0;
-            flex-wrap: initial;
-
-            #btnClose{
-                right: 10px;
-                top: 10px;
-                padding: 8px;
-                img{
-                    width: 1rem;
-                }
-            }
+            max-width: initial;
 
             .episode__infomartions{
                 flex-wrap: wrap;
-                align-content: flex-start;
-                max-height: 75%;
-                animation-duration: 0.8s;
-
+                height: 50vh;
+                margin-top: 0;
                 .episode__container-img{
                     position: relative;
                     margin: 0;
                     border-radius: 0;
                     overflow: hidden;
                     width: 100%;
-                    height: 30vh;
+                    height: 26.4rem;
+                    
                     
                     img{
                         width: 110%;
-                        height: 30vh;
+                        height: 100%;
                         position: absolute;
                     }
                 }
-
                 .episode__container-text{
                     max-width: 100%;
-                    overflow: hidden;
-                    margin: 0 20px 0 20px;
-                    justify-content: initial;
+                    margin-left: 3rem;
+
 
                     h1{
-                        width: 100%;
-                        font-size: 1rem;
-                        margin: 20px auto;
-                    }
-
-
-                    .container__read-more{
-                        
-                        margin-top: 5px;
-
-                        span{
-                            font-size: 0.9rem;
-                        }
-
-                        img{
-                            width: 0.9rem;
-                        }
+                        width: 95%;
+                        font-size: 1.4rem;
+                        margin: 4rem 0 -1rem 0;
                     }
 
                     p{
-                        margin-top: 5px;
-                        width: 100%;
-                        font-size: 0.9rem;
-                        overflow: auto;
-                        
+                        width: 95%;
+                        font-size: 1.4rem;
                     }
 
-                    span{
-                        margin-top: 5%;
-                        font-size: 0.7rem;
+                    .container__read-more{
+                        margin: -2rem 0 0 0;
+                        span{
+                            font-size: 1.4rem;
+
+                        }
+
+                        img{
+                            width: 1.4rem;
+                        }
+                    }
+
+
+                    
+                    #participants{
+                        font-size: 1rem;
                     }
                 }
             }
 
-            
+            #btnClose{
+                padding: 1rem;
+                img{
+                    width: 1.5rem;
+                }
+            }
 
             .container__player{
-                height: 5rem;
+                height: 12.6rem;
                 .player{
                     flex-direction: column;
                     width: 100%;
-                    height: 80px;
 
                     .player__controls{
-                        width: 9rem;
-
+                        width: 17rem;
                         #btnPrevious{
-                            padding: 9px;
-                        }
-
-                        #btnPlay{
-                            padding: 10px;
+                            padding: 1.5rem;
                             img{
                                 width: 1.5rem;
                             }
                         }
 
+                        #btnPlay{
+                            padding: 2rem;
+                            img{
+                                width: 2rem;
+                            }
+                        }
+    
                         #btnNext{
-                            padding: 9px;
+                            padding: 1.5rem;
+                            img{
+                                width: 1.5rem;
+                            }
                         }
                     }
-                }
-                .container__progress-audio{
-                    width: 100%;
-                    justify-content: space-between;
-
-                    .container__progressBar{
-                        width: 70%;
-                        
-
-                        .progressBar{
-                            width: 100%;
-                            height: 5px;
-
-                                                // SAFARI
-                            &::-webkit-slider-runnable-track{
-                                height: 5px;
-                            }
-
-                                //Mozilla
-                            &::-ms-track{
-                                height: 5px;
-                            }
-
-                            &::-moz-range-progress{
-                                height: 5px;
-                            }
-
-
-                            // chrome e safari
-                            &::before{
-                                content: '';
-                                height: 5px;
+                    .container__progress-audio{
+                        width: 100%;
+                        justify-content: space-between;
+    
+                        .currentTime{
+                            font-size: 1.6rem;
+                        }
+    
+                        .duration{
+                            font-size: 1.6rem;
+                        }
+    
+                        .container__progressBar{
+                            width: 70%;
+    
+                            .progressBar{
+                                width: 100%;
                             }
                         }
                     }
                 }
+                
                 
             }
         }
@@ -214,7 +205,7 @@
 }
 
 // Dispositivos extra small (telefones em modo retrato, com menos de 576px)
-@media (min-width: 376px) and (max-width: 575.98px) {
+@media (min-width: 440px) and (max-width: 575.98px) {
     body{
         .container{
             overflow: initial;
@@ -224,13 +215,23 @@
                 max-width: initial;
                 left: initial;
                 width: 100%;
-                height: 20rem;
+                height: 30rem;
     
                 #left__img{
-                    width: 110%;
+                    width: 120%;
                     max-width: initial;
                     left: initial;
-                    height: 100%;
+                    height: auto
+                }
+
+                h1{
+                    margin-left: 3rem;
+                    left: 0;
+                }
+
+                p{
+                    margin-left: 3rem;
+                    left: 0;
                 }
             }
 
@@ -258,6 +259,8 @@
 
                                 .episode__about{
                                     max-width: 60%;
+
+
                                 }
                             }
                         }
@@ -270,65 +273,74 @@
         .container__episode{
             overflow: initial;
             max-height: initial;
-            height: 100%;
+            height: 100vh;
             margin: 0;
-            flex-wrap: initial;
-            #btnClose{
-                right: 12px;
-                top: 12px;
-                padding: 9px;
-                img{
-                    width: 1rem;
-                }
-            }
+            max-width: initial;
 
             .episode__infomartions{
                 flex-wrap: wrap;
-                overflow: hidden;
-                height: 79vh;
-                animation-duration: 0.8s;
-
+                height: 45vh;
+                margin-top: 0;
                 .episode__container-img{
                     position: relative;
                     margin: 0;
                     border-radius: 0;
                     overflow: hidden;
                     width: 100%;
-                    height: 35vh;
+                    height: 40vh;
+                    
                     
                     img{
                         width: 110%;
-                        height: 40vh;
+                        height: auto;
                         position: absolute;
                     }
                 }
-
                 .episode__container-text{
                     max-width: 100%;
-                    overflow: hidden;
-                    margin: 20px 20px 5px;
-                    height: 75%;
+                    margin-left: 3rem;
+
+
                     h1{
-                        width: 100%;
-                        font-size: 1.5rem;
+                        width: 95%;
+                        font-size: 2rem;
+                        margin: 4rem 0 -1rem 0;
                     }
 
                     p{
-                        width: 100%;
-                        overflow: auto;
-                        margin-top: 10px;
+                        width: 95%;
+                        font-size: 2rem;
                     }
 
-                    span{
-                        margin-top: 10px;
+                    .container__read-more{
+                        margin:0;
+                        span{
+                            font-size: 2rem;
+
+                        }
+
+                        img{
+                            width: 2rem;
+                        }
+                    }
+
+
+                    
+                    #participants{
+                        font-size: 1.5rem;
                     }
                 }
             }
 
-            
+            #btnClose{
+                padding: 1.2rem;
+                img{
+                    width: 2.2rem;
+                }
+            }
 
             .container__player{
-                height: 8rem;
+                height: 13rem;
                 .player{
                     flex-direction: column;
                     width: 100%;
@@ -337,34 +349,15 @@
                     width: 100%;
                     justify-content: space-between;
 
+                    .currentTime{
+                        font-size: 2rem;
+                    }
+
                     .container__progressBar{
                         width: 70%;
-                        
 
                         .progressBar{
                             width: 100%;
-                            height: 5px;
-
-                            // SAFARI
-                            &::-webkit-slider-runnable-track{
-                                height: 5px;
-                            }
-
-                                //Mozilla
-                            &::-ms-track{
-                                height: 5px;
-                            }
-
-                            &::-moz-range-progress{
-                                height: 5px;
-                            }
-
-
-                            // chrome e safari
-                            &::before{
-                                content: '';
-                                height: 5px;
-                            }
                         }
                     }
                 }
@@ -380,16 +373,30 @@
         .container{
             overflow: initial;
             margin: 0;
-    
+            max-width: initial;
             #container__left{
                 max-width: initial;
                 left: initial;
                 width: 100%;
+                height: 40rem;
+
+                h1{
+                    font-size: 5.4rem;
+                    left: 0;
+                    margin-left: 3rem;
+                }
+
+                p{
+                    font-size: 2rem;
+                    left: 0;
+                    margin-left: 3rem;
+                }
     
                 #left__img{
-                    width: 100%;
+                    width: 110%;
                     max-width: initial;
                     left: initial;
+                    height: auto;
                 }
             }
             #container__right{
@@ -403,7 +410,8 @@
                     margin-top: 30px;
 
                     #box-list__title{
-                        margin-bottom: 20px;
+                        margin-bottom: 2rem;
+                        font-size: 1.1rem;
                     }
 
                     #box-list__episodes{
@@ -413,122 +421,25 @@
                         .episode__item{
 
                             a{
-                                width: fit-content;
-                                .episode__about{
-                                    max-width: 75%;
+                                margin-bottom: 3rem;
+                                .episode__container-img{
+                                    width: 12rem;
+                                    height: 12rem;
+                                    .episode__img{
+                                        width: 18rem;
+                                    }
                                 }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        .container__episode{
-            overflow: initial;
-            max-height: initial;
-            height: 100%;
-            margin: 0;
-
-            .episode__infomartions{
-                flex-wrap: wrap;
-                animation-duration: 0.8s;
-                .episode__container-img{
-                    position: relative;
-                    margin: 0;
-                    border-radius: 0;
-                    overflow: hidden;
-                    width: 100%;
-                    height: 40vh;
-                    
-                    
-                    img{
-                        width: 105%;
-                        height: 45vh;
-                        position: absolute;
-                    }
-                }
-                .episode__container-text{
-                    max-width: 100%;
-
-                    h1{
-                        width: 100%;
-                        font-size: 1.6rem;
-                    }
-
-                    p{
-                        width: 100%;
-                        font-size: 1.2rem;
-                    }
-                }
-            }
-
-            
-
-            .container__player{
-                margin-top: 2rem;
-                .player{
-                    flex-direction: column;
-                    width: 100%;
-                }
-                .container__progress-audio{
-                    width: 100%;
-                    justify-content: space-between;
-
-                    .container__progressBar{
-                        width: 70%;
-
-                        .progressBar{
-                            width: 100%;
-                        }
-                    }
-                }
-                
-            }
-        }
-    }
-}
-
-// Dispositivos médios (tablets com 768px ou mais)
-@media (min-width: 768px) and (max-width: 991.98px) {
-    body{
-        .container{
-            overflow: initial;
-            margin: 0;
-            #container__left{
-                max-width: initial;
-                left: initial;
-                width: 100%;
-    
-                #left__img{
-                    width: 100%;
-                    max-width: initial;
-                    left: initial;
-                }
-            }
-            #container__right{
-                width: 100%;
-
-                #about{
-                    display: none;
-                }
-
-                #box-list{
-                    margin-top: 30px;
-
-                    #box-list__title{
-                        margin-bottom: 20px;
-                    }
-
-                    #box-list__episodes{
-                        overflow: initial;
-                        max-height: 120vh;
-        
-                        .episode__item{
-
-                            a{
-                                width: fit-content;
                                 .episode__about{
                                     max-width: 100%;
+                                    width: 75%;
+
+                                    .episode__title{
+                                        font-size: 2.2rem;
+                                    }
+
+                                    .episode__duration{
+                                        font-size: rem;
+                                    }
                                 }
                             }
                         }
@@ -541,46 +452,275 @@
             max-height: initial;
             height: 100vh;
             margin: 0;
+            max-width: initial;
 
             .episode__infomartions{
                 flex-wrap: wrap;
+                height: 45vh;
+                margin-top: 0;
                 .episode__container-img{
                     position: relative;
                     margin: 0;
                     border-radius: 0;
                     overflow: hidden;
                     width: 100%;
-                    height: 50vh;
+                    height: 45vh;
                     
                     
                     img{
                         width: 110%;
-                        height: 55vh;
+                        height: auto;
                         position: absolute;
                     }
                 }
                 .episode__container-text{
                     max-width: 100%;
+                    margin-left: 3rem;
+
 
                     h1{
-                        width: 100%;
-                        font-size: 1.7rem;
+                        width: 95%;
+                        font-size: 2.5rem;
+                        margin: 4rem 0 -1rem 0;
                     }
 
                     p{
-                        width: 100%;
-                        font-size: 1.5rem;
+                        width: 95%;
+                        font-size: 2.5rem;
                     }
+
+                    .container__read-more{
+                        margin: -3rem 0 0 0;
+                        span{
+                            font-size: 2.5rem;
+
+                        }
+
+                        img{
+                            width: 2.5rem;
+                        }
+                    }
+
+
                     
                     #participants{
-                        font-size: 1rem;
+                        font-size: 1.7rem;
                     }
                 }
             }
 
-            
+            #btnClose{
+                padding: 1.2rem;
+                img{
+                    width: 2.2rem;
+                }
+            }
 
             .container__player{
+                height: 15rem;
+                .player{
+                    flex-direction: column;
+                    width: 100%;
+
+                    .player__controls{
+                        width: 23rem;
+                        #btnPrevious{
+                            padding: 2rem;
+                            img{
+                                width: 2rem;
+                            }
+                        }
+
+                        #btnPlay{
+                            padding: 3rem;
+                            img{
+                                width: 3rem;
+                            }
+                        }
+    
+                        #btnNext{
+                            padding: 2rem;
+                            img{
+                                width: 2rem;
+                            }
+                        }
+                    }
+                }
+                .container__progress-audio{
+                    width: 100%;
+                    justify-content: space-between;
+
+                    .currentTime{
+                        font-size: 2rem;
+                    }
+
+                    .container__progressBar{
+                        width: 70%;
+
+                        .progressBar{
+                            width: 100%;
+                        }
+                    }
+                }
+
+                
+                
+            }
+        }
+    }
+}
+
+// Dispositivos médios (tablets com 768px ou mais)
+@media (min-width: 768px) and (max-width: 991.98px) {
+    body{
+        .container{
+            overflow: initial;
+            margin: 0;
+            max-width: initial;
+            #container__left{
+                max-width: initial;
+                left: initial;
+                width: 100%;
+                height: 50vh;
+
+                h1{
+                    font-size: 5.4rem;
+                    left: 0;
+                    margin-left: 3rem;
+                }
+
+                p{
+                    font-size: 2rem;
+                    left: 0;
+                    margin-left: 3rem;
+                }
+    
+                #left__img{
+                    width: 110%;
+                    max-width: initial;
+                    left: initial;
+                    height: auto;
+                }
+            }
+            #container__right{
+                width: 100%;
+
+                #about{
+                    display: none;
+                }
+
+                #box-list{
+                    margin-top: 30px;
+
+                    #box-list__title{
+                        margin-bottom: 2rem;
+                        font-size: 1.2rem;
+                    }
+
+                    #box-list__episodes{
+                        overflow: initial;
+                        max-height: 120vh;
+        
+                        .episode__item{
+
+                            a{
+                                margin-bottom: 3rem;
+                                .episode__container-img{
+                                    width: 12rem;
+                                    height: 12rem;
+                                    .episode__img{
+                                        width: 18rem;
+                                    }
+                                }
+                                .episode__about{
+                                    max-width: 100%;
+                                    width: 75%;
+
+                                    .episode__title{
+                                        font-size: 2.4rem;
+                                    }
+
+                                    .episode__duration{
+                                        font-size: 2rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .container__episode{
+            overflow: initial;
+            max-height: initial;
+            height: 100vh;
+            margin: 0;
+            max-width: initial;
+
+            .episode__infomartions{
+                flex-wrap: wrap;
+                height: 50vh;
+                margin-top: 0;
+                .episode__container-img{
+                    position: relative;
+                    margin: 0;
+                    border-radius: 0;
+                    overflow: hidden;
+                    width: 100%;
+                    height: 45vh;
+                    
+                    
+                    img{
+                        width: 100%;
+                        height: 50vh;
+                        position: absolute;
+                    }
+                }
+                .episode__container-text{
+                    max-width: 100%;
+                    margin-left: 3rem;
+
+
+                    h1{
+                        width: 95%;
+                        font-size: 3rem;
+                        margin: 4rem 0 -1rem 0;
+                    }
+
+                    p{
+                        width: 95%;
+                        font-size: 3rem;
+                    }
+
+                    .container__read-more{
+                        margin: -3rem 0 0 0;
+                        span{
+                            font-size: 3rem;
+
+                        }
+
+                        img{
+                            width: 3rem;
+                        }
+                    }
+
+
+                    
+                    #participants{
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            #btnClose{
+                padding: 1.5rem;
+                img{
+                    width: 2.5rem;
+                }
+            }
+
+            .container__player{
+                height: 15rem;
                 .player{
                     flex-direction: column;
                     width: 100%;
@@ -588,6 +728,10 @@
                 .container__progress-audio{
                     width: 100%;
                     justify-content: space-between;
+
+                    .currentTime{
+                        font-size: 2rem;
+                    }
 
                     .container__progressBar{
                         width: 70%;
@@ -598,32 +742,6 @@
                     }
                 }
                 
-            }
-        }
-    }
-}
-
-// Dispositivos large (desktops com 992px ou mais)
-@media (min-width: 992px) and (max-width: 1199.98px) {
-    body{
-        .container__episode{
-
-            .episode__infomartions{
-                max-height: 45vh;
-                align-items: center;
-            }
-        }
-    }
-}
-
-// Dispositivos extra large (desktops grandes com 1200px ou mais)
-@media (min-width: 1200px) {
-    body{
-        .container__episode{
-
-            .episode__infomartions{
-                max-height: 45vh;
-                align-items: center;
             }
         }
     }
