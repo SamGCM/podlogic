@@ -1,10 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react'
-import {Link} from 'react-router-dom'
-
-//Importando informações do episódio
-
-import { Episode4Info } from '../hooks/geralInfo.js'
-
+import {Link, useParams} from 'react-router-dom'
+import axios from 'axios';
 
 // Importando imagens
 
@@ -17,18 +13,46 @@ import iconNext from '../images/next.png'
 
 // Importando função de converter segundos em minutos e segundos => 00:00
 import { convertTime } from '../functions/converTime.js';
+import convertString from '../functions/formatParticipants';
+
+
 
 
 // Para criar a página do episódio 1
 
-function Episode4(){
+function Episode(){
 
-    //Pegando array de objetos do episódio 1
-    
-    const episode4 = Episode4Info()
+    const {id} = useParams()
 
 
-    
+
+    const [infoEpisode, setInfoEpisode] = useState({
+        id: '',
+        name: '',
+        description: '',
+        duration: '',
+        participants: '',
+        episodeNumber: '',
+        cover: '',
+        audio: ''
+        })
+
+    const getInfo = async function ( ) {
+    const url = `https://api-frontend-test.brlogic.com/podcast/episodes/${id}/details.json`
+
+    // Fazendo requisição
+    await axios.get(url)
+        .then( response => {
+            setInfoEpisode(response.data)
+        })
+    }
+
+    // Fazer a requisição ser executada somente uma vez por renderização
+    useEffect(( ) => {
+    getInfo()
+    }, [])
+
+    const episode = infoEpisode
 
 
     // references
@@ -48,10 +72,10 @@ function Episode4(){
     const [isPlaying, setIsPlaying] = useState(false);
     const [duration, setDuration] = useState(0)
     const [currentTime, setCurrentTime] = useState(0)
-    const [height, setHeight] = useState('33%')
+    const [height, setHeight] = useState('35%')
     const [rotation, setRotation] = useState('rotate(0deg)')
     const [btnMoreText, readLess] = useState('Ler mais')
-    const [containerHeight, setContainerHeight] = useState('16rem')
+    const [containerHeight, setContainerHeight] = useState('80%')
 
 
     
@@ -74,7 +98,6 @@ function Episode4(){
     },[audioPlayer?.current?.loadedmetadata, audioPlayer?.current?.readyState])
 
     
-
     
     
 
@@ -82,14 +105,16 @@ function Episode4(){
 
     const togglePlayPause = () => {
         const prevValue = isPlaying
-    
+        
         setIsPlaying(!prevValue);
         if(!prevValue){
         audioPlayer.current.play()
         animationRef.current = requestAnimationFrame(whilePlaying)
+        
         }else{
         audioPlayer.current.pause()
         cancelAnimationFrame(animationRef.current)
+        
         }
     }
 
@@ -115,9 +140,10 @@ function Episode4(){
     }
     
     const changePlayerCurrentTime = () => {
+        
         progressBar.current.style.setProperty('--seek-before-width',
         `${progressBar.current.value / Math.floor(audioPlayer.current.duration) * 100}%`)
-        setCurrentTime(progressBar.current.value)
+        setCurrentTime(parseInt(progressBar.current.value))
     }
     
 
@@ -126,51 +152,6 @@ function Episode4(){
     //Icones de play e pause declarados para ser usados na função
     const iconPlay = imgPlay
     const iconPause = imgPause
-    
-
-
-    // Pega a url atual para navegar para os próximos episódios
-    
-    const nextEpisode = () => {
-
-        //  Pega a url atual do navegador
-        const actualUrl = window.location.href
-        
-        //pega a última posição do array, no caso o número do episódio e soma mais um
-        const regex = parseInt(actualUrl.substr(-1))+1 
-    
-
-        //Aqui se substitui toda a url e retorna episode-RESULTADO DO REGEX e navega para a url nova
-
-        if(regex == 7){ //Se estiver no episódio 6 e o regex for 7, retorna a url para o episódio 1
-        return actualUrl.replace(actualUrl, 'episode-'+ 1)
-        }{
-        return actualUrl.replace(actualUrl, 'episode-'+ regex)
-        }
-    }
-    
-    const previousEpisode = () => {
-
-        //  Pega a url atual do navegador
-        const actualUrl = window.location.href
-        
-        
-        //pega a última posição do array, no caso o número do episódio e soma mais um
-        const regex = parseInt(actualUrl.substr(-1))-1
-        
-        //Aqui se substitui toda a url e retorna episode-RESULTADO DO REGEX e navega para a url nova
-        
-        if(regex == 0){// Se estiver no episódio 1 e o regex for 0, retorna a url para o episódio 6
-        return actualUrl.replace(actualUrl, 'episode-'+ 6)
-        }{
-        return actualUrl.replace(actualUrl, 'episode-'+ regex)
-        }
-    }
-    
-    const next = nextEpisode()
-    const previous = previousEpisode()
-
-
 
         return(
             <div>
@@ -180,58 +161,59 @@ function Episode4(){
                 </a>
                     <div className='episode__infomartions'>
                         <div className='episode__container-img'>
-                            <img src={episode4['cover']} alt='Enorme quantidade de carros em rodovia' />
+                            <img src={episode['cover']} alt='Mulher fala ao microfone em um estúdio de podcast' />
                         </div>
-                        
                         <div ref={episodeContainerText} className='episode__container-text' >
-                            <h1>Episódio {episode4['episodeNumber']} - {episode4['name']}</h1>
-                            <p ref={text}>  {episode4['description']}</p>
+                            <h1>Episódio {episode['episodeNumber']} - {episode['name']}</h1>
+                            <p ref={text}>  {episode['description']}</p>
                             <div className='container__read-more' onClick={() => {
-                                setHeight(height === '33%' ? '50%' :'33%')
+                                setHeight(height === '35%' ? '50%' :'35%')
                                 setRotation(rotation === 'rotate(0deg)' ? 'rotate(180deg)' : 'rotate(0deg)')
                                 readLess(btnMoreText === 'Ler mais' ? 'Ler menos' : 'Ler mais')
-                                setContainerHeight(containerHeight === '16rem' ? '18rem' : '16rem')
+                                setContainerHeight(containerHeight === '80%' ? '80%' : '80%')
                             }}>
                                 <span ref={readMore} >Ler mais</span>
                                 <img ref={downArrow} src={iconDownArrow} alt='Icone de seta para expandir o texto'/>
                             </div>
                             <span id='participants'>
-                                Participantes: {episode4['participants'].toString()}
+                                Participantes: {convertString(episode['participants'])}
                             </span>
                         </div>
                         
                     </div>
                     <div className='container__player'>
                     <div className='player'>
-                        <audio ref={audioPlayer} src={episode4['audio']}/>
+                        {/* Foi adicionado um áudio diferente neste apenas para demosntração de som */}
+                        <audio ref={audioPlayer} src={episode['audio']}/>
                         
                         <div className='container__progress-audio'>
                             {/* Current time */}
 
                             <div className='currentTime'>
-                            {convertTime(currentTime)}
+                                {convertTime(currentTime)}
                             </div>
 
                             {/* Progress bar */}
                             <div className='container__progressBar'>
-                                <input type='range' className='progressBar' defaultValue='0' ref={progressBar} onChange={changeRange}/>
+                                <input type='range' className='progressBar' defaultValue='0'
+                                ref={progressBar} onChange={changeRange} minLength='0' />
                             </div>
 
 
                             {/* duration*/}
                             <div className='duration'>
-                                {convertTime(episode4['duration'])}
+                                {convertTime(episode['duration'])}
                             </div>
                         </div>
                         
                         <div className='player__controls'>
-                            <Link to={previous} id='btnPrevious'>
+                            <Link to={''} id='btnPrevious'>
                                 <img src={iconNext} alt='Icone de avançar para próximo podcast' />
                             </Link>
                             <button id='btnPlay' onClick={togglePlayPause}>
                                 <img  src={isPlaying ? iconPause : iconPlay} alt='Icone de pausar ou continuar audio' />
                             </button>
-                            <Link to={next} id='btnNext'>
+                            <Link to={''} id='btnNext'>
                                 <img src={iconNext} alt='Icone de retroceder para podcast anterior' />
                             </Link>
                             
@@ -246,4 +228,5 @@ function Episode4(){
         )
 }
 
-export default Episode4
+export default Episode
+
